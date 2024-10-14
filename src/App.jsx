@@ -3,7 +3,6 @@ import ContactInfo from "./component/ContactInfo";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
 import Home from "./component/Home";
-// import PotatoChipsAnimation2 from "./component/Amimation";
 import ProductOfferings from "./component/HomePage/ProductOfferings";
 import BlogList from "./component/BlogList";
 import FAQs from "./component/FAQs";
@@ -11,9 +10,9 @@ import ViewAllProducts from "./component/ViewAllProducts";
 import Contact from "./component/Contact";
 import AboutUs from "./component/AboutUs";
 import Support from "./component/Support";
+import YellowCornProducts from "./component/yellowCornProducts";
 import PotatoVariations from "./component/potatoVariations";
 import PotatoSeedsProducts from "./component/PotatoSeedsProducts";
-import YellowCornProducts from "./component/yellowCornProducts";
 
 
 const App = () => {

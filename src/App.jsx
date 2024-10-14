@@ -12,8 +12,8 @@ import Contact from "./component/Contact";
 import AboutUs from "./component/AboutUs";
 import Support from "./component/Support";
 import PotatoVariations from "./component/potatoVariations";
-import YellowCornProducts from "./component/yellowCornProducts";
 import PotatoSeedsProducts from "./component/PotatoSeedsProducts";
+import YellowCornProducts from "./component/yellowCornProducts";
 
 
 const App = () => {

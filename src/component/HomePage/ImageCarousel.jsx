@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import icons
+import { FaArrowLeft, FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icons
 import image1 from "../../images/gp1.png";
 import image2 from "../../images/gp2.png";
 import image3 from "../../images/gp3.png";
@@ -45,15 +45,15 @@ const ImageCarousel = () => {
         {/* Next and Prev buttons with icons */}
         <button
           onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#10375C] text-white px-3 py-2 rounded"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#10375C] text-white px-3 py-2 rounded hover:bg-[#8ea5ba]"
         >
-          <FaArrowLeft /> {/* Prev Icon */}
+          <FaChevronLeft /> {/* Prev Icon */}
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#10375C] text-white px-3 py-2 rounded"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#10375C] text-white px-3 py-2 rounded hover:bg-[#8ea5ba]"
         >
-          <FaArrowRight /> {/* Next Icon */}
+          <FaChevronRight /> {/* Next Icon */}
         </button>
       </div>
     </div>

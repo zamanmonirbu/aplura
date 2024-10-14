@@ -4,7 +4,7 @@ import { FaBuilding } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="bg-gray-50 text-center h-screen flex flex-col justify-center items-center p-6">
-      <div className="w-1/3 mb-4"> {/* Adjust the width as needed */}
+      <div className="w-full max-w-md mb-4"> {/* Adjust the width as needed */}
         <h2 className="text-4xl font-bold mb-2" style={{ color: "#10375C" }}>
           Get in Touch with Aplura GmbH
         </h2>

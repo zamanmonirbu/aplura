@@ -2,7 +2,7 @@ import { useState } from 'react';
 import pc1 from '../images/sp1.jpg';
 import pc2 from '../images/sp2.jpg';
 
-const potatoSeedsProducts = [
+const SeedsProducts = [
   { name: 'Seed Russet', image: pc1, features: 'High yield, Disease-resistant, Suitable for various climates.' },
   { name: 'Seed Yukon Gold', image: pc2, features: 'Excellent taste, High market value, Adaptable to soil conditions.' },
 ];
@@ -22,7 +22,7 @@ const PotatoSeedsProducts = () => {
     <div className="p-4">
       <h2 className="text-2xl font-bold text-center bg-[#10375C] p-4 text-white my-8 mb-16">Potato Seeds Products</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {potatoSeedsProducts.map((product, index) => (
+        {SeedsProducts.map((product, index) => (
           <div
             key={index}
             className="relative group cursor-pointer"

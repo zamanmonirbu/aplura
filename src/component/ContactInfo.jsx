@@ -2,7 +2,7 @@ import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const ContactInfo = () => {
   return (
-    <div className="flex items-center space-x-4 bg-[#EB8317] py-2 font-bold">
+    <div className="sticky top-0 z-50 flex items-center space-x-4 bg-[#EB8317] py-2 font-bold">
       {/* Empty space taking 1/5 of the width */}
       <div className="w-1/5"></div>
 

@@ -9,13 +9,13 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <nav className="bg-[#10375C] border-gray-200 px-4 lg:px-6 py-6 dark:bg-gray-800 text-2xl text-white">
+    <header className="sticky top-0 z-50">
+      <nav className="bg-[#10375C] border-gray-200 px-4 lg:px-6 py-4 dark:bg-gray-800 text-2xl text-white">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl ">
           <a href="/" className="flex items-center ">
             <img
               src={logo}
-              className="mr-3 h-6 sm:h-9"
+              className="mr-3 h-12 w-10"
               alt="Logo"
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">

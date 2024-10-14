@@ -1,83 +1,126 @@
-import Icon from '../images/logo1.png'
+import {
+  FaPhone,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaFacebook,
+  FaTwitter,
+  FaYoutube,
+  FaYelp,
+  FaInstagram,
+  FaLinkedin,
+  FaPinterest,
+  FaTiktok,
+  FaSnapchat,
+  FaWhatsapp,
+} from "react-icons/fa"; // Add more icons
+
 const Footer = () => {
-    return (
-      <div>
-        <footer className="bg-white dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="lg:flex lg:items-start lg:gap-8">
-              <div className="text-teal-600 dark:text-teal-300">
-                <img src={Icon} alt="footer" className='h-8 w-12' />
-              </div>
-  
-              <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
-                {/* News Signup */}
-                <div className="col-span-2">
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      Get the latest news!
-                    </h2>
-  
-                    <p className="mt-4 text-gray-500 dark:text-gray-400">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Esse non cupiditate quae nam molestias.
-                    </p>
-                  </div>
-                </div>
-  
-                {/* Signup Form */}
-                <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
-                  <form className="w-full">
-                    <label htmlFor="UserEmail" className="sr-only"> Email </label>
-  
-                    <div className="border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4 dark:border-gray-800">
-                      <input
-                        type="email"
-                        id="UserEmail"
-                        placeholder="john@rhcp.com"
-                        className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm dark:bg-gray-900 dark:text-white"
-                      />
-  
-                      <button className="mt-1 w-full bg-teal-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
-                        Sign Up
-                      </button>
-                    </div>
-                  </form>
-                </div>
-  
-                {/* Other Sections */}
-                <div className="col-span-2 sm:col-span-1">
-                  <p className="font-medium text-gray-900 dark:text-white">
-                    Services
-                  </p>
-  
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">1on1 Coaching</a></li>
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">Company Review</a></li>
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">Accounts Review</a></li>
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">HR Consulting</a></li>
-                  </ul>
-                </div>
-  
-                {/* Legal */}
-                <div className="col-span-2 sm:col-span-1">
-                  <p className="font-medium text-gray-900 dark:text-white">
-                    Legal
-                  </p>
-  
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">Terms & Conditions</a></li>
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">Privacy Policy</a></li>
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">Licensing</a></li>
-                    <li><a href="#" className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">Cookie Policy</a></li>
-                  </ul>
-                </div>
-              </div>
+  return (
+    <div>
+      <footer className="bg-[#0F2C4F] text-white py-8 text-2xl">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Center grid items */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center justify-center items-center">
+            {/* Sales & Support */}
+            <div className="flex flex-col justify-center items-center hover:-translate-y-2 transition-transform duration-300">
+              <FaPhone className="w-16 h-16 mb-2 text-red-500" />
+              <h4 className="font-semibold">Sales & Support</h4>
+              <p className="mt-2">217-903-5999</p>
+            </div>
+
+            {/* Address */}
+            <div className="flex flex-col justify-center items-center hover:-translate-y-2 transition-transform duration-300">
+              <FaMapMarkerAlt className="w-16 h-16 mb-2 text-red-500" />
+              <h4 className="font-semibold">Address</h4>
+              <p className="mt-2">Diepholz, Germany</p>
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col justify-center items-center hover:-translate-y-2 transition-transform duration-300">
+              <FaEnvelope className="w-16 h-16 mb-2 text-red-500" />
+              <h4 className="font-semibold">Email</h4>
+              {/* <p className="mt-2">Get in Touch</p> */}
+              <a
+                href="mailto:info@aplura.com"
+                className="text-white hover:underline"
+              >
+                info@aplura.com
+              </a>
             </div>
           </div>
-        </footer>
-      </div>
-    );
-  };
-  
-  export default Footer;
-  
+
+          {/* Social Icons */}
+          <div className="flex justify-center items-center my-12 space-x-4 flex-wrap">
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaFacebook className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaTwitter className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaYoutube className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaYelp className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaInstagram className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaLinkedin className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaPinterest className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaTiktok className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaSnapchat className="w-[40px] h-[40px]" />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
+            >
+              <FaWhatsapp className="w-[40px] h-[40px]" />
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <div className="mt-8 text-center">
+            <p className="text-sm">&copy; 2024. All Rights Reserved. Aplura GmbH.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Footer;

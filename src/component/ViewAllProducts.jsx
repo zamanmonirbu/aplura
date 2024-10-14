@@ -1,16 +1,15 @@
-import PotatoSeedsProducts from "./PotatoSeedsProducts";
-import PotatoVariations from "./potatoVariations";
-import YellowCornProducts from "./yellowCornProducts";
-
+import PotatoSeedsProducts from "./SevondPage/PotatoSeedsProducts";
+import PotatoVariations from "./SevondPage/PotatoVariations";
+import YellowCornProducts from "./SevondPage/YellowCornProducts";
 
 const ViewAllProducts = () => {
-    return (
-        <div>
-            <PotatoVariations/>
-            <YellowCornProducts/>
-            <PotatoSeedsProducts/>
-        </div>
-    );
+  return (
+    <div>
+      <PotatoVariations />
+      <YellowCornProducts />
+      <PotatoSeedsProducts />
+    </div>
+  );
 };
 
 export default ViewAllProducts;

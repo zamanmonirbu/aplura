@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import p1 from '../images/ps1.jpeg';
-import p2 from '../images/ps2.jpeg';
-import p3 from '../images/ps3.jpeg';
-import p4 from '../images/ps4.jpg';
-import p5 from '../images/ps5.jpg';
-import p6 from '../images/ps6.jpg';
+import p1 from '../../images/ps1.jpeg';
+import p2 from '../../images/ps2.jpeg';
+import p3 from '../../images/ps3.jpeg';
+import p4 from '../../images/ps4.jpg';
+import p5 from '../../images/ps5.jpg';
+import p6 from '../../images/ps6.jpg';
 
 const Variations = [
   { name: 'Russet', image: p1, features: 'High starch content, Excellent for baking and frying.' },

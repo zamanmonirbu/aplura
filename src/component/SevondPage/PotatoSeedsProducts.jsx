@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import pc1 from '../images/sp1.jpg';
-import pc2 from '../images/sp2.jpg';
+import pc1 from '../../images/sp1.jpg';
+import pc2 from '../../images/sp2.jpg';
 
 const SeedsProducts = [
   { name: 'Seed Russet', image: pc1, features: 'High yield, Disease-resistant, Suitable for various climates.' },

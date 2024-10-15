@@ -9,6 +9,9 @@ export default {
       height: {
         '400': '400px',
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],

@@ -5,10 +5,10 @@ const Contact = () => {
   return (
     <div className="bg-gray-50 text-center h-screen flex flex-col justify-center items-center p-6">
       <div className="w-full max-w-md mb-4"> {/* Adjust the width as needed */}
-        <h2 className="text-4xl font-bold mb-2" style={{ color: "#10375C" }}>
-          Get in Touch with Aplura GmbH
+        <h2 className="text-2xl text-left font-bold mb-2" style={{ color: "#10375C" }}>
+          Get in Touch with <span className="text-[#EB8317]">Aplura GmbH</span>
         </h2>
-        <p className="mb-8 text-lg text-[#10375C]">
+        <p className="mb-8 text-lg text-[#10375C] text-left">
           We value your feedback and are here to assist you. Please reach out to us using the contact details below.
         </p>
       </div>

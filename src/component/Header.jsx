@@ -11,8 +11,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50">
       <nav className="bg-[#10375C] border-gray-200 px-4 lg:px-6 py-4 dark:bg-gray-800 text-2xl text-white">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl ">
-          <a href="/" className="flex items-center ">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
+          <a href="/" className="flex items-center">
             <img
               src={logo}
               className="mr-3 h-12 w-10"
@@ -25,7 +25,7 @@ const Header = () => {
           <div className="flex items-center lg:order-2">
             <button
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 text-white"
+              className="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-600 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 text-white"
               aria-controls="mobile-menu"
               aria-expanded={isOpen ? "true" : "false"}
               onClick={toggleMenu}
@@ -60,50 +60,21 @@ const Header = () => {
           <div
             className={`${
               isOpen ? "block" : "hidden"
-            } justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
+            } justify-center items-center w-full lg:flex lg:w-auto lg:order-1 bg-[#10375C] lg:bg-transparent`} // Change background color for small devices
             id="mobile-menu"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-              <li>
-                <a
-                  href="/products"
-                  className="block py-2 pr-4 pl-3 rounded bg-transparent transition-all duration-300 hover:bg-slate-600"
-                >
-                  Products
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/variants"
-                  className="block py-2 pr-4 pl-3 rounded bg-transparent transition-all duration-300 hover:bg-slate-600"
-                >
-                  Variants
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact"
-                  className="block py-2 pr-4 pl-3 rounded bg-transparent transition-all duration-300 hover:bg-slate-600"
-                >
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about-us"
-                  className="block py-2 pr-4 pl-3 rounded bg-transparent transition-all duration-300 hover:bg-slate-600"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/support"
-                  className="block py-2 pr-4 pl-3 rounded bg-transparent transition-all duration-300 hover:bg-slate-600"
-                >
-                  Support
-                </a>
-              </li>
+              {['Products', 'Variants', 'Contact', 'About Us', 'Support'].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`/${item.toLowerCase().replace(' ', '-')}`}
+                    className="block py-2 pr-4 pl-3 rounded transition-all duration-300 text-center 
+                      hover:bg-gray-100 lg:hover:bg-slate-600" 
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

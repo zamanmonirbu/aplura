@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <div className="flex flex-col items-center p-6 bg-white">
       <h2 className="text-4xl font-bold mb-6" style={{ color: '#10375C' }}>
-        About Aplura GmbH
+        About <span className="text-[#EB8317]">Aplura GmbH</span>
       </h2>
 
       <div className="max-w-3xl text-lg text-left text-[#10375C] mb-8">

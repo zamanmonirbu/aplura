@@ -5,39 +5,34 @@ import {
   FaFacebook,
   FaTwitter,
   FaYoutube,
-  FaYelp,
   FaInstagram,
-  FaLinkedin,
-  FaPinterest,
-  FaTiktok,
-  FaSnapchat,
   FaWhatsapp,
 } from "react-icons/fa"; // Add more icons
 
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[#0F2C4F] text-white py-8 text-2xl">
+      <footer className="bg-[#0F2C4F] text-white py-8 text-lg">
         <div className="max-w-7xl mx-auto px-4">
           {/* Center grid items */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center justify-center items-center">
             {/* Sales & Support */}
             <div className="flex flex-col justify-center items-center hover:-translate-y-2 transition-transform duration-300">
-              <FaPhone className="w-16 h-16 mb-2 text-red-500" />
+              <FaPhone className="w-12 h-12 mb-2 text-red-500" />
               <h4 className="font-semibold">Sales & Support</h4>
               <p className="mt-2">217-903-5999</p>
             </div>
 
             {/* Address */}
             <div className="flex flex-col justify-center items-center hover:-translate-y-2 transition-transform duration-300">
-              <FaMapMarkerAlt className="w-16 h-16 mb-2 text-red-500" />
+              <FaMapMarkerAlt className="w-12 h-12 mb-2 text-red-500" />
               <h4 className="font-semibold">Address</h4>
               <p className="mt-2">Diepholz, Germany</p>
             </div>
 
             {/* Email */}
             <div className="flex flex-col justify-center items-center hover:-translate-y-2 transition-transform duration-300">
-              <FaEnvelope className="w-16 h-16 mb-2 text-red-500" />
+              <FaEnvelope className="w-12 h-12 mb-2 text-red-500" />
               <h4 className="font-semibold">Email</h4>
               {/* <p className="mt-2">Get in Touch</p> */}
               <a
@@ -69,42 +64,14 @@ const Footer = () => {
             >
               <FaYoutube className="w-[40px] h-[40px]" />
             </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
-            >
-              <FaYelp className="w-[40px] h-[40px]" />
-            </a>
+           
             <a
               href="#"
               className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
             >
               <FaInstagram className="w-[40px] h-[40px]" />
             </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
-            >
-              <FaLinkedin className="w-[40px] h-[40px]" />
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
-            >
-              <FaPinterest className="w-[40px] h-[40px]" />
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
-            >
-              <FaTiktok className="w-[40px] h-[40px]" />
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
-            >
-              <FaSnapchat className="w-[40px] h-[40px]" />
-            </a>
+           
             <a
               href="#"
               className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"

@@ -1,4 +1,4 @@
-import backgroundImage from "../../images/b3.jpg"; // Replace with your overall background image path
+import backgroundImage from "../../images/p5.jpg"; // Replace with your overall background image path
 import potatoImage from "../../images/potatoSub.jpg"; // Replace with the image for potatoes
 import cornImage from "../../images/cornssub.jpg"; // Replace with the image for corn
 import seedImage from "../../images/potetoSub.jpeg"; // Replace with the image for potato seeds
@@ -29,7 +29,7 @@ const products = [
   {
     title: "Potato Seeds",
     description:
-      "We also offer premium potato seeds, catering to the AMEA region and South America. Our seeds are carefully selected to ensure high yield and disease resistance.You must get best production from our seeds. ",
+      "We also offer premium potato seeds, catering to the AMEA region and South America. Our seeds are carefully selected to ensure high yield and disease resistance. You must get the best production from our seeds.",
     features: [
       "Disease-resistant varieties",
       "High germination rates",
@@ -51,7 +51,7 @@ const ProductOfferings = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative h-[500px] p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white"
+              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto" // Adjust max-w for wider divs
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
@@ -61,28 +61,24 @@ const ProductOfferings = () => {
                   backgroundSize: "cover",
                 }}
               ></div>
-              <div className="relative z-10 text-left text-[#10375C]">
-                <h3 className="text-2xl font-semibold mb-4">
-                  {product.title}
-                </h3>
-                <p className="mb-6 text-lg">{product.description}</p>
+              <div className="relative z-10 text-left text-[#10375C] p-4">
+                <h3 className="text-2xl font-semibold mb-2">{product.title}</h3>
+                <p className="mb-4 text-md">{product.description}</p>
                 <h4 className="font-semibold text-xl">Features:</h4>
-                <ul className="list-disc list-inside mb-6">
+                <ul className="list-disc list-inside mb-4">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700 text-lg">
+                    <li key={idx} className="text-gray-700 text-md">
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                {/* Centered "Varitence" button */}
+                {/* Centered "Variations" button */}
                 <div className="flex justify-center">
                   <button
-                    className="px-6 py-2 bg-[#10375C] text-white font-semibold rounded-lg hover:bg-[#0a0c0d] transition-colors"
+                    className="px-4 py-2 bg-[#10375C] text-white font-semibold rounded-lg hover:bg-[#0a0c0d] transition-colors text-sm md:text-base"
                     onClick={() =>
-                      window.location.href = `/products/${product.title
-                        .replace(/\s+/g, "")
-                        .toLowerCase()}`
+                      (window.location.href = `/products/${product.title.replace(/\s+/g, "").toLowerCase()}`)
                     } // Navigate to URL based on title
                   >
                     Variations
@@ -98,4 +94,3 @@ const ProductOfferings = () => {
 };
 
 export default ProductOfferings;
-  

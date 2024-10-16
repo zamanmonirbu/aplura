@@ -1,58 +1,50 @@
 .image-container {
   position: relative;
   width: 100%;
-  height: 80vh; /* Set the height for the component */
-  overflow: hidden; /* Ensure that any overflow is hidden */
-  background-attachment: fixed; /* Keep background fixed during scroll */
+  min-height: 100vh; /* Ensures full viewport height */
+  background-image: url('../../images/b1.jpg'); /* Add your background image */
+  background-size: 100%; /* Always keep the background at 100% */
+  background-position: center;
+  background-attachment: fixed; /* Keeps background fixed */
+  background-repeat: no-repeat;
+  animation: scaleBackground 30s infinite; /* Animation for scaling */
+  overflow: hidden; /* Hide any overflow */
+}
+
+@keyframes scaleBackground {
+  0%, 100% {
+    background-size: 100%; /* Start and end at original size */
+  }
+  50% {
+    background-size: 110%; /* Scale up by 10% */
+  }
 }
 
 .image-background {
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url('../../images/b1.jpg'); /* Add your background image here */
-  background-size: cover; /* Ensure the background covers the entire container */
-  background-position: center; /* Center the background image */
-  background-attachment: fixed; /* Keeps the background fixed */
-  animation: scaleInOut 20s infinite; /* Apply scaling animation */
-  z-index: -1; /* Make sure this background is behind other content */
-}
-
-@keyframes scaleInOut {
-  0%, 100% {
-    transform: scale(1); /* Start and end at original size */
-  }
-  50% {
-    transform: scale(1.2); /* Scale up the image by 20% */
-  }
+  height: 100%; /* Ensure background image covers full height */
 }
 
 .overlay {
-  position: absolute;
+  position: absolute; /* Position relative to .image-container */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Overlay covers entire container */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.image-container:hover .overlay {
-  opacity: 1;
 }
 
 .animated-text {
   color: white;
   font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 .animated-button {
@@ -61,42 +53,28 @@
   border-radius: 5px;
   border: none;
   color: white;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
 }
 
 .animated-button:hover {
-  background-color: white;
-  color: #10375C;
+   background-color: white;
+   color: #10375C;
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  .image-container {
-    height: 60vh; /* Adjust height on smaller screens */
-  }
-
-  .animated-text {
-    font-size: 1.5rem;
-  }
-
-  .animated-button {
-    font-size: 1.2rem;
-  }
+@media (max-width:768px) {
+   .animated-text {
+     font-size:1.5rem;
+   }
+   .animated-button {
+     font-size:1.2rem;
+   }
 }
 
-@media (max-width: 480px) {
-  .image-container {
-    height: 50vh; /* Further reduce height for very small screens */
-  }
-
-  .animated-text {
-    font-size: 1.2rem;
-  }
-
-  .animated-button {
-    font-size: 1rem;
-  }
+@media (max-width:480px) {
+   .animated-text {
+     font-size:1.2rem;
+   }
+   .animated-button {
+     font-size:1rem;
+   }
 }

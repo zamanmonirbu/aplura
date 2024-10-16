@@ -1,7 +1,7 @@
-import backgroundImage from "../../images/p5.jpg"; // Replace with your overall background image path
-import potatoImage from "../../images/potatoSub.jpg"; // Replace with the image for potatoes
-import cornImage from "../../images/cornssub.jpg"; // Replace with the image for corn
-import seedImage from "../../images/potetoSub.jpeg"; // Replace with the image for potato seeds
+import backgroundImage from "../../images/p5.jpg"; // Overall background image path
+import potatoImage from "../../images/potatoSub.jpg"; // Image for potatoes
+import cornImage from "../../images/cornssub.jpg"; // Image for corn
+import seedImage from "../../images/potetoSub.jpeg"; // Image for potato seeds
 
 const products = [
   {
@@ -43,7 +43,13 @@ const ProductOfferings = () => {
   return (
     <section
       className="py-20 bg-cover bg-center min-h-screen flex justify-center items-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundRepeat: 'no-repeat', // Prevents the background from repeating
+        backgroundAttachment: 'fixed',   // Fixes the background image
+        backgroundPosition: 'center',     // Centers the background
+        backgroundSize: 'cover',          // Ensures it covers the full area
+      }}
     >
       <div className="container mx-auto text-center bg-[#10375C] p-10 rounded-lg shadow-lg">
         <h2 className="text-4xl font-bold mb-8 text-white">Our Services</h2>
@@ -51,7 +57,7 @@ const ProductOfferings = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto" // Adjust max-w for wider divs
+              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"

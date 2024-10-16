@@ -4,7 +4,7 @@ import CommitmentAndLogistics from "./HomePage/CommitmentAndLogistics";
 import ExploreMore from "./HomePage/ExploreMore";
 import ImageCarousel from "./HomePage/ImageCarousel";
 import ImageUpDown from "./HomePage/ImageUpDown";
-import ImageWithRisingImages from "./HomePage/ImageWithRisingImages";
+// import ImageWithRisingImages from "./HomePage/ImageWithRisingImages";
 import ProductOfferings from "./HomePage/ProductOfferings";
 import WhereWeDeliver from "./HomePage/WhereWeDeliver";
 
@@ -14,7 +14,6 @@ const Home = () => {
     <div>
       <BackgroundVideoComponent/>
       <ImageUpDown />
-      <ImageWithRisingImages/>
       <ImageCarousel />
       <ProductOfferings />
       <CommitmentAndLogistics />

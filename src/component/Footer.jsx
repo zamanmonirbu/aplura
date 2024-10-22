@@ -52,18 +52,6 @@ const Footer = () => {
             >
               <FaFacebook className="w-[40px] h-[40px]" />
             </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
-            >
-              <FaTwitter className="w-[40px] h-[40px]" />
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-transform transform hover:scale-110"
-            >
-              <FaYoutube className="w-[40px] h-[40px]" />
-            </a>
            
             <a
               href="#"

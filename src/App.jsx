@@ -8,9 +8,9 @@ import Footer from "./component/Footer";
 import Header from "./component/Header";
 import Home from "./component/Home";
 import ProductOfferings from "./component/HomePage/ProductOfferings";
-import PotatoSeedsProducts from "./component/SevondPage/PotatoSeedsProducts";
-import PotatoVariations from "./component/SevondPage/PotatoVariations";
-import YellowCornProducts from "./component/SevondPage/YellowCornProducts";
+import PotatoSeedsProducts from "./component/SecondPage/PotatoSeedsProducts";
+import PotatoVariations from "./component/SecondPage/PotatoVariations";
+import YellowCornProducts from "./component/SecondPage/YellowCornProducts";
 import Support from "./component/Support";
 import ViewAllProducts from "./component/ViewAllProducts";
 
@@ -37,7 +37,6 @@ const App = () => {
         <Route path="/support" element={<Support />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/faq" element={<FAQs />} />
-        {/* <Route path="/" element={<Home/>}/> */}
       </Routes>
       <Footer />
     </div>

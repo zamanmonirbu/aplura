@@ -1,0 +1,35 @@
+.coming-soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjusted width for better look */
+    text-align: center;
+    font-size: 22px;
+    color: #f5f5f5;
+    background-color: rgba(91, 89, 89, 0.6); /* Set background color to 60% opacity */
+    padding: 8px;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeInComingSoon 1s 3s forwards;
+    display: flex;
+    flex-direction: column; /* Changed to column to stack the SVG and text */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center justify items */
+  }
+  
+  .icon {
+    width: 100px; /* Adjust icon size */
+    height: auto;
+    opacity: 0.6;
+  }
+  
+  @keyframes fadeInComingSoon {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

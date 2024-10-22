@@ -1,25 +1,26 @@
-import BackgroundVideoComponent from "./BackgroundVideoComponent";
+import FAQs from "./FAQs";
+import HeroSection from "./HomePage/HeroSection";
 import HomeAboutUs from "./HomeAboutUs";
 import CommitmentAndLogistics from "./HomePage/CommitmentAndLogistics";
-import ExploreMore from "./HomePage/ExploreMore";
 import ImageCarousel from "./HomePage/ImageCarousel";
-import ImageUpDown from "./HomePage/ImageUpDown";
-// import ImageWithRisingImages from "./HomePage/ImageWithRisingImages";
 import ProductOfferings from "./HomePage/ProductOfferings";
 import WhereWeDeliver from "./HomePage/WhereWeDeliver";
+// import Gallery from "./ImageAndTextSection";
+// import CountryMap from "./HomePage/CountryMap";
 
 
 const Home = () => {
   return (
     <div>
-      <BackgroundVideoComponent/>
-      <ImageUpDown />
+      <HeroSection/>
       <ImageCarousel />
       <ProductOfferings />
       <CommitmentAndLogistics />
       <WhereWeDeliver />
       <HomeAboutUs/>
-      <ExploreMore />
+      {/* <CountryMap/> */}
+      <FAQs/>
+      {/* <Gallery/> */}
     </div>
   );
 };

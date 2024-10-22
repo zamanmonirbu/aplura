@@ -1,13 +1,18 @@
 import { FaBuilding, FaSeedling, FaHandsHelping } from 'react-icons/fa'; // Importing icons
+import ParticlesComponent from './Particle/ParticlesComponent';
+
 
 const HomeAboutUs = () => {
   return (
-    <div className="flex flex-col items-center p-10 bg-white">
-      <h2 className="text-3xl font-bold mb-6 " style={{ color: '#10375C' }}>
+    <div className="relative flex flex-col items-center my-10 p-5 bg-white border rounded shadow w-[54%] mx-auto">
+      {/* Background Particles */}
+      <ParticlesComponent />
+
+      <h2 className="text-3xl font-bold mb-6 " style={{ color: '#10375C', zIndex: 10 }}>
         About <span className='text-[#EB8317]'>Aplura GmbH</span>
       </h2>
 
-      <div className="max-w-5xl text-lg text-[#10375C] mb-8 text-justify"> {/* Increased max-width */}
+      <div className="max-w-5xl text-lg text-[#10375C] mb-8 text-justify relative z-10"> {/* Increased max-width */}
         <p className="mb-4">
           Aplura GmbH is a premier agricultural supplier specializing in high-quality potatoes for chip production and yellow corn for tortilla manufacturing. With a solid foundation built on over a decade of industry experience, we pride ourselves on our commitment to excellence and our service-oriented approach.
         </p>
@@ -16,8 +21,17 @@ const HomeAboutUs = () => {
         </p>
       </div>
 
-      <div className="flex flex-col items-start max-w-5xl w-full text-justify"> {/* Increased max-width */}
+      <div className="flex flex-col items-start max-w-5xl w-full text-justify relative z-10"> {/* Increased max-width */}
         
+        <div className='mb-4'>
+          <div className="flex items-start mb-4">
+            <FaBuilding className="text-3xl mr-4" style={{ color: '#10375C' }} />
+            <span className="font-semibold">Company Overview</span>
+          </div>
+          <p className="mb-2">Established: May 24, 2024</p>
+          <p className="mb-2">Location: Diepholz, Germany</p>
+          <p className="mb-4">Industry: Agriculture</p>
+        </div>
 
         <div className="flex items-center mb-4">
           <FaSeedling className="text-3xl mr-4" style={{ color: '#10375C' }} />
@@ -34,16 +48,6 @@ const HomeAboutUs = () => {
         <p>
           Our service-oriented approach emphasizes building long-lasting relationships with our clients, ensuring their needs are met with integrity and professionalism.
         </p>
-
-        <div className="mx-auto mt-16">
-        <div className="flex items-center mb-4">
-          <FaBuilding className="text-3xl mr-4" style={{ color: '#10375C' }} />
-          <span className="font-semibold">Company Overview</span>
-        </div>
-        <p className="mb-2">Established: May 24, 2024</p>
-        <p className="mb-2">Location: Diepholz, Germany</p>
-        <p className="mb-4">Industry: Agriculture</p>
-        </div>
       </div>
     </div>
   );

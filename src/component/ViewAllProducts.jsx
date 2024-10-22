@@ -1,13 +1,17 @@
-import PotatoSeedsProducts from "./SevondPage/PotatoSeedsProducts";
-import PotatoVariations from "./SevondPage/PotatoVariations";
-import YellowCornProducts from "./SevondPage/YellowCornProducts";
+import ParticlesComponent from "./Particle/ParticlesComponent";
+import PotatoSeedsProducts from "./SecondPage/PotatoSeedsProducts";
+import PotatoVariations from "./SecondPage/PotatoVariations";
+import YellowCornProducts from "./SecondPage/YellowCornProducts";
 
 const ViewAllProducts = () => {
   return (
-    <div>
-      <PotatoVariations />
-      <YellowCornProducts />
-      <PotatoSeedsProducts />
+    <div className="products-container">
+      <ParticlesComponent /> 
+      <div className="content">
+        <PotatoVariations />
+        <YellowCornProducts />
+        <PotatoSeedsProducts />
+      </div>
     </div>
   );
 };

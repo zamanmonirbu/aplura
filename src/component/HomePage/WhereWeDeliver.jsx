@@ -1,83 +1,103 @@
-// import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
-// import 'leaflet/dist/leaflet.css';
-// import L from 'leaflet';
+import React, { useState } from 'react';
+import map from '../../images/MapChart_Map.png';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS for proper map display
 
-// // Import marker icon images
-// import markerIcon from 'leaflet/dist/images/marker-icon.png';
-// import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-// import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+// Country coordinates and names
+const countries = [
+  { name: "Germany", coords: [51.1657, 10.4515] },
+  { name: "Saudi Arabia", coords: [23.8859, 45.0792] },
+  { name: "India", coords: [20.5937, 78.9629] },
+  { name: "South Korea", coords: [35.9078, 127.7669] },
+  { name: "South Africa", coords: [-30.5595, 22.9375] },
+];
 
-// // Set default icon for markers
-// delete L.Icon.Default.prototype._getIconUrl;
-// L.Icon.Default.mergeOptions({
-//   iconRetinaUrl: markerIcon2x,
-//   iconUrl: markerIcon,
-//   shadowUrl: markerShadow,
-// });
-
-// // Array of country data
-// const countries = [
-//   { name: "Germany", coordinates: [51.1657, 10.4515], region: "Europe" },
-//   { name: "Saudi Arabia", coordinates: [23.8859, 45.0792], region: "Middle East" },
-//   { name: "India", coordinates: [20.5937, 78.9629], region: "Asia" },
-//   { name: "South Africa", coordinates: [-30.5595, 22.9375], region: "Africa" },
-//   { name: "Brazil", coordinates: [-14.2350, -51.9253], region: "South America" },
-// ];
-
-// // MapView component
-// const MapView = () => {
-//   return (
-//     <div style={{ position: 'relative', height: '100vh' }}>
-//       <MapContainer
-//         center={[20, 0]}
-//         zoom={2}
-//         style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}
-//         scrollWheelZoom={false} // Disable zooming with the scroll wheel
-//         dragging={true} // Keep dragging enabled
-//         zoomControl={false} // Hide zoom controls
-//       >
-//         <TileLayer
-//           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-//         />
-//         {countries.map((country) => (
-//           <Marker key={country.name} position={country.coordinates}>
-//             <Tooltip direction="top" offset={[0, -5]} opacity={1} permanent>
-//               {country.name}
-//             </Tooltip>
-//             <Popup>
-//               <strong>{country.name}</strong><br />
-//               Region: {country.region}
-//             </Popup>
-//           </Marker>
-//         ))}
-//       </MapContainer>
-//     </div>
-//   );
-// };
-
-// export default MapView;
-
-
-// import React from 'react';
-import map from '../../images/map.png';
+// Custom location marker using HTML (a red circle for simplicity)
+const locationIcon = L.divIcon({
+  className: 'custom-icon',
+  html: `<div style="background-color: red; width: 20px; height: 20px; border-radius: 50%;"></div>`,
+  iconSize: [20, 20],
+  iconAnchor: [10, 20],
+});
 
 const MapView = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+
+  const handleOpenModal = (country) => {
+    setSelectedCountry(country);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedCountry(null);
+  };
+
   return (
     <div
-      className="relative w-full min-h-screen bg-cover bg-center bg-fixed"
+      className="relative w-full min-h-screen bg-cover bg-center bg-fixed transition-opacity duration-300"
       style={{
-        backgroundImage: `url(${map})`, // Set the map image as the background
-        backgroundRepeat: 'no-repeat',  // Ensure the background does not repeat
-        backgroundAttachment: 'fixed',   // Keeps background fixed
-        backgroundPosition: 'center',     // Center the background
-        backgroundSize: 'cover',          // Ensures it covers the full area
+        backgroundImage: `url(${map})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
       }}
     >
-      {/* Optional: You can add content here if needed */}
+      {/* Hover Effect to change opacity and show button */}
+      <div className="absolute inset-0 hover:bg-black hover:bg-opacity-50 transition duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
+        <button
+          className="px-6 py-3 bg-white text-black rounded shadow-lg hover:bg-gray-300 transition duration-200"
+          onClick={() => handleOpenModal(countries[0])} // Change as needed for specific countries
+        >
+          View Map
+        </button>
+      </div>
+
+      {/* Modal for map view */}
+      {isModalOpen && selectedCountry && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 overflow-y-auto">
+          <div className="bg-white p-6 rounded-lg shadow-lg relative w-11/12 md:w-2/3 lg:w-1/2 max-h-full overflow-y-auto">
+            {/* Larger Close Button */}
+            <button
+              className="absolute top-4 right-4 text-4xl font-bold text-red-500"
+              onClick={handleCloseModal}
+            >
+              &times;
+            </button>
+
+            {/* Map View Inside Modal */}
+            <MapContainer 
+              center={selectedCountry.coords} 
+              zoom={5} 
+              scrollWheelZoom={true} 
+              style={{ height: "400px", width: "98%" }}
+              dragging={true}
+              touchZoom={false}
+              zoomControl={true}
+              doubleClickZoom={true}
+            >
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <Marker position={selectedCountry.coords} icon={locationIcon}>
+                <Popup>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <FaMapMarkerAlt style={{ color: 'red', marginRight: '8px' }} />
+                    <span>{selectedCountry.name}</span>
+                  </div>
+                </Popup>
+              </Marker>
+            </MapContainer>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default MapView;
-

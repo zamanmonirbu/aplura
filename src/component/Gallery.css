@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.gallery-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling of the gallery */
+}
+
+.section {
+    flex: 1; /* Each section takes equal space */
+    background-size: cover; /* Cover the whole section */
+    background-position: center; /* Center the background image */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    position: relative; /* Positioning for text */
+    overflow: hidden; /* Hide overflow of images */
+}
+
+.section1 {
+    background-image: url('../images/chips1.png');
+    background-attachment: fixed; /* Fix background image */
+}
+
+.section2 {
+    background-image: url('../images/chips2.png');
+    background-attachment: fixed; /* Fix background image */
+}
+
+.section3 {
+    background-image: url('../images/chips3.png');
+    background-attachment: fixed; /* Fix background image */
+}
+
+.section4 {
+    background-image: url('../images/chips3.png');
+    background-attachment: fixed; /* Fix background image */
+}
+
+.text {
+    position: absolute; /* Allow text to scroll */
+    right: 20px; /* Space from right */
+    top: 50%;
+    transform: translateY(-50%); /* Center text vertically */
+    max-height: 90%; /* Limit height */
+    overflow-y: auto; /* Allow scrolling */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 8px;
+}

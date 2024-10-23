@@ -67,21 +67,21 @@ const services = [
 
 const GalleryImages = () => {
   return (
-    <div className="flex flex-col w-[90%] md:w-[70%] mx-auto">
-      <p className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-10 text-fifth">
+    <div className="flex flex-col w-[90%] md:w-[54%] mx-auto">
+      <p className="text-4xl font-bold text-center mb-10 text-fifth">
         Image <span className="text-sixth">Gallery</span>
       </p>
       {services.map((service, index) => (
         <div
           className={`flex flex-col md:flex-row ${
             index % 2 === 0 ? 'md:flex-row-reverse' : ''
-          } min-h-[250px] md:min-h-[300px] mb-6 md:mb-10`}
+          } min-h-[300px] mb-10`}
           key={index}
         >
           {/* Image Section */}
-          <div className="relative flex-1 h-auto mb-4 md:mb-0">
+          <div className="relative flex-1 h-[200px] md:h-[300px]">
             <div
-              className="bg-cover bg-center w-full h-[200px] md:h-[300px] rounded-md"
+              className="bg-cover bg-center bg-fixed w-full h-full object-cover rounded-md min-h-72 min-w-72"
               style={{
                 backgroundImage: `url(${service.imageUrl})`,
               }}
@@ -89,22 +89,21 @@ const GalleryImages = () => {
 
             {/* Title over image */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-lg md:text-2xl lg:text-3xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded-md">
+              <h2 className="text-white text-2xl md:text-4xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded-md">
                 {service.title}
               </h2>
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="flex-1 flex flex-col justify-center p-4 md:p-6 lg:p-10">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">{service.heading}</h3>
-            <p className="text-base md:text-lg lg:text-xl">{service.text}</p>
+          <div className="flex-1 flex flex-col justify-center p-6 md:p-10">
+            <h3 className="text-2xl font-bold mb-2">{service.heading}</h3>
+            <p className="text-lg">{service.text}</p>
           </div>
         </div>
       ))}
     </div>
   );
 };
-
 
 export default GalleryImages;

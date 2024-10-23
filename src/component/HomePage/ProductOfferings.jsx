@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import potatoImage from "../../images/potatoSub.jpg"; // Image for potatoes
-import cornImage from "../../images/cornssub.jpg"; // Image for corn
-import seedImage from "../../images/potetoSub.jpeg"; // Image for potato seeds
+import backgroundImage from "../../images/p5.jpg"; // Replace with your overall background image path
+import potatoImage from "../../images/potatoSub.jpg"; // Replace with the image for potatoes
+import cornImage from "../../images/cornssub.jpg"; // Replace with the image for corn
+import seedImage from "../../images/potetoSub.jpeg"; // Replace with the image for potato seeds
 
 const products = [
   {
@@ -40,41 +40,18 @@ const products = [
 ];
 
 const ProductOfferings = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  // Set up the Intersection Observer
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.5 } // Trigger when 50% of the component is in view
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
-      className={`py-20 min-h-screen flex justify-center items-center relative transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className="py-20 bg-cover bg-center min-h-screen flex justify-center items-center"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="container mx-auto text-center bg-third p-5 rounded-lg shadow-lg relative z-10">
-        <h2 className="text-4xl font-bold mb-8 text-fourth">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto text-center bg-[#10375C] p-10 rounded-lg shadow-lg">
+        <h2 className="text-4xl font-bold mb-8 text-white">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs mx-auto"
+              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto" // Adjust max-w for wider divs
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
@@ -84,24 +61,25 @@ const ProductOfferings = () => {
                   backgroundSize: "cover",
                 }}
               ></div>
-              <div className="relative z-10 text-left text-third p-4">
-                <h3 className="text-xl md:text-2xl font-semibold mb-2">{product.title}</h3>
-                <p className="mb-4 text-sm md:text-md">{product.description}</p>
-                <h4 className="font-semibold text-lg">Features:</h4>
+              <div className="relative z-10 text-left text-[#10375C] p-4">
+                <h3 className="text-2xl font-semibold mb-2">{product.title}</h3>
+                <p className="mb-4 text-md">{product.description}</p>
+                <h4 className="font-semibold text-xl">Features:</h4>
                 <ul className="list-disc list-inside mb-4">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700 text-sm md:text-md">
+                    <li key={idx} className="text-gray-700 text-md">
                       {feature}
                     </li>
                   ))}
                 </ul>
 
+                {/* Centered "Variations" button */}
                 <div className="flex justify-center">
                   <button
-                    className="px-4 py-2 bg-third text-white font-semibold rounded-lg hover:bg-third transition-colors text-sm md:text-base"
+                    className="px-4 py-2 bg-[#10375C] text-white font-semibold rounded-lg hover:bg-[#0a0c0d] transition-colors text-sm md:text-base"
                     onClick={() =>
                       (window.location.href = `/products/${product.title.replace(/\s+/g, "").toLowerCase()}`)
-                    }
+                    } // Navigate to URL based on title
                   >
                     Variations
                   </button>

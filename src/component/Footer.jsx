@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[#0F2C4F] text-white py-8 text-lg">
+      <footer className="bg-third text-white py-8 text-lg">
         <div className="max-w-7xl mx-auto px-4">
           {/* Center grid items */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center justify-center items-center">

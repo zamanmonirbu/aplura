@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="bg-third border-gray-200 px-4 lg:px-6 py-4 text-2xl text-white">
+      <nav className="bg-secondary border-gray-200 px-4 lg:px-6 py-4 text-2xl text-white">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
           <a href="/" className="flex items-center">
             <img
@@ -25,7 +25,7 @@ const Header = () => {
           <div className="flex items-center lg:order-2">
             <button
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-fifth focus:outline-none focus:ring-2 focus:ring-[#a3e4a3] text-white"
+              className="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-seconHover focus:outline-none focus:ring-2 focus:ring-[#a3e4a3] text-white"
               aria-controls="mobile-menu"
               aria-expanded={isOpen ? "true" : "false"}
               onClick={toggleMenu}
@@ -69,7 +69,7 @@ const Header = () => {
                   <a
                     href={`/${item.toLowerCase().replace(' ', '-')}`}
                     className="block py-2 pr-4 pl-3 rounded transition-all duration-300 text-center 
-                      hover:bg-fifth lg:hover:bg-fifth text-white" // Ensure hover color matches text
+                      hover:bg-seconHover lg:hover:bg-seconHover text-white" // Ensure hover color matches text
                   >
                     {item}
                   </a>

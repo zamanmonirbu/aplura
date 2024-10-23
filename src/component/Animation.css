@@ -1,0 +1,13 @@
+/* Initially hide the image */
+.gallery-img {
+    opacity: 0;
+    transform: translateY(20px); /* Start position slightly below */
+    transition: opacity 4s ease, transform 4s ease;
+  }
+  
+  /* Fade-in effect when image enters viewport */
+  .gallery-img.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+  }
+  

@@ -4,7 +4,8 @@ import bgImage from '../images/Aplora.jpeg'; // Import the background image
 
 const HomeAboutUs = () => {
   return (
-    <div className="relative flex flex-col items-center my-10 p-5 bg-white border rounded shadow w-[90%] md:w-[54%] mx-auto">
+   <div className='bg-third'>
+     <div className="relative flex flex-col items-center p-5 bg-white text-third border rounded shadow w-[90%] md:w-[67%] mx-auto ">
       
       {/* Background Particles */}
       <ParticlesComponent />
@@ -24,11 +25,11 @@ const HomeAboutUs = () => {
 
       {/* Main Content */}
       <div className="relative z-10 text-center">
-        <h2 className="text-3xl font-bold mb-6" style={{ color: '#10375C', zIndex: 10 }}>
+        <h2 className="text-3xl font-bold mb-6" style={{ color: 'black', zIndex: 10 }}>
           About <span className="text-[#EB8317]">Aplura GmbH</span>
         </h2>
 
-        <div className="max-w-5xl text-lg text-fifth mb-8 text-justify relative z-10">
+        <div className="max-w-5xl text-lg text-secondary mb-8 text-justify relative z-10 text-secondary">
           <p className="mb-4">
             Aplura GmbH is a premier agricultural supplier specializing in high-quality potatoes for chip production and yellow corn for tortilla manufacturing. With a solid foundation built on over a decade of industry experience, we pride ourselves on our commitment to excellence and our service-oriented approach.
           </p>
@@ -38,7 +39,7 @@ const HomeAboutUs = () => {
         </div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-start max-w-5xl w-full text-fifth text-justify">
+      <div className="relative z-10 flex flex-col items-start max-w-5xl w-full text-fifth text-justify text-secondary">
         {/* Company Overview */}
         <div className="mb-4">
           <div className="flex items-start mb-4">
@@ -73,6 +74,7 @@ const HomeAboutUs = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

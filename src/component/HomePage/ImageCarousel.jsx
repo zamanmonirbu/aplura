@@ -86,13 +86,13 @@ const ImageCarousel = () => {
         {/* Next and Prev buttons with icons */}
         <button
           onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#10375C] text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-third text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
         >
           <FaChevronLeft />
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#10375C] text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-third text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
         >
           <FaChevronRight />
         </button>

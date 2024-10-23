@@ -64,19 +64,19 @@ const FAQs = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-third ">
       {/* Particles Component in the background */}
       <ParticlesComponent />
 
       {/* FAQs Content */}
-      <div className="relative z-10 max-w-5xl mx-auto my-10 p-5 bg-white border rounded shadow">
+      <div className="relative z-10 max-w-5xl mx-auto my-1 p-5 bg-white  border rounded shadow">
         <h2 className="text-2xl font-semibold text-center mb-5">
           Frequently Asked Questions
         </h2>
         {faqs.map((faq, index) => (
           <div key={index} className="mb-4 border-b">
             <div
-              className="flex justify-between items-center cursor-pointer py-3"
+              className="flex justify-between items-center cursor-pointer py-3 text-secondary"
               onClick={() => toggleAnswer(index)}
             >
               <h3 className="text-lg font-medium">{faq.question}</h3>
@@ -85,7 +85,7 @@ const FAQs = () => {
               </span>
             </div>
             {expandedIndex === index && (
-              <p className="text-gray-700">{faq.answer}</p>
+              <p className="text-secondary">{faq.answer}</p>
             )}
           </div>
         ))}

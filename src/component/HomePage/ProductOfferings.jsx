@@ -45,7 +45,7 @@ const ProductOfferings = () => {
       className="py-20 bg-cover bg-center min-h-screen flex justify-center items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="container mx-auto text-center bg-[#10375C] p-10 rounded-lg shadow-lg">
+      <div className="container mx-auto text-center bg-third p-10 rounded-lg shadow-lg">
         <h2 className="text-4xl font-bold mb-8 text-white">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {products.map((product, index) => (
@@ -61,13 +61,13 @@ const ProductOfferings = () => {
                   backgroundSize: "cover",
                 }}
               ></div>
-              <div className="relative z-10 text-left text-[#10375C] p-4">
+              <div className="relative z-10 text-left text-secondary p-4">
                 <h3 className="text-2xl font-semibold mb-2">{product.title}</h3>
                 <p className="mb-4 text-md">{product.description}</p>
                 <h4 className="font-semibold text-xl">Features:</h4>
                 <ul className="list-disc list-inside mb-4">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700 text-md">
+                    <li key={idx} className="text-secondary text-md">
                       {feature}
                     </li>
                   ))}
@@ -76,7 +76,7 @@ const ProductOfferings = () => {
                 {/* Centered "Variations" button */}
                 <div className="flex justify-center">
                   <button
-                    className="px-4 py-2 bg-[#10375C] text-white font-semibold rounded-lg hover:bg-[#0a0c0d] transition-colors text-sm md:text-base"
+                    className="px-4 py-2 bg-secondary text-white font-semibold rounded-lg hover:bg-seconHover transition-colors text-sm md:text-base"
                     onClick={() =>
                       (window.location.href = `/products/${product.title.replace(/\s+/g, "").toLowerCase()}`)
                     } // Navigate to URL based on title

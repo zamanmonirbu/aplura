@@ -4,9 +4,6 @@ import bg3 from '../images/potato3.png';
 import bg4 from '../images/corn4.jpg';
 import bg5 from '../images/corn3.jpg';
 import bg6 from '../images/cornRuti.jpeg';
-import bg7 from '../images/pt2.jpeg';
-import bg8 from '../images/pt3.jpeg';
-import bg9 from '../images/pt4.jpeg';
 
 const services = [
   {
@@ -45,58 +42,41 @@ const services = [
     heading: "Corn Quality Control",
     imageUrl: bg6,
   },
-  {
-    title: "Certified Potato Seeds for Optimal Growth",
-    text: "Aplura GmbH also provides high-quality, certified potato seeds, ensuring that our customers can achieve maximum yield and superior quality in their crops. Our potato seeds are carefully chosen to deliver excellent results in any growing condition.",
-    heading: "Certified Seeds",
-    imageUrl: bg7,
-  },
-  {
-    title: "Premium Seed Selection for Farmers",
-    text: "We collaborate closely with experienced farmers and agricultural experts to provide potato seeds that are genetically optimized for superior growth, ensuring a strong harvest every season.",
-    heading: "Seed Optimization",
-    imageUrl: bg8,
-  },
-  {
-    title: "Ensuring Quality from Seed to Harvest",
-    text: "Our commitment to quality starts with the seeds we provide. We ensure that every seed meets the highest industry standards, empowering farmers to grow top-quality potatoes from the ground up.",
-    heading: "Seed to Harvest",
-    imageUrl: bg9,
-  },
 ];
 
 const GalleryImages = () => {
   return (
-    <div className="flex flex-col w-[90%] md:w-[54%] mx-auto">
-      <p className="text-4xl font-bold text-center mb-10 text-fifth">
-        Image <span className="text-sixth">Gallery</span>
+    <div className="flex flex-col w-[90%] md:w-full mx-auto bg-third">
+      <p className="text-4xl font-bold text-center my-10 text-white">
+        Image <span className="text-secondary">Gallery</span>
       </p>
       {services.map((service, index) => (
         <div
           className={`flex flex-col md:flex-row ${
             index % 2 === 0 ? 'md:flex-row-reverse' : ''
-          } min-h-[300px] mb-10`}
+          } min-h-[350px] mb-10`}
           key={index}
         >
           {/* Image Section */}
-          <div className="relative flex-1 h-[200px] md:h-[300px]">
+          <div className="relative flex-[2] h-[300px] md:h-[400px] overflow-hidden">
             <div
-              className="bg-cover bg-center bg-fixed w-full h-full object-cover rounded-md min-h-72 min-w-72"
+              className="bg-cover bg-center bg-fixed w-full h-full rounded-md"
               style={{
                 backgroundImage: `url(${service.imageUrl})`,
+                backgroundAttachment: 'fixed', // Keep the background fixed
               }}
             ></div>
 
             {/* Title over image */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-2xl md:text-4xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded-md">
+              <h2 className="text-white text-2xl md:text-4xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded-md w-[70%]">
                 {service.title}
               </h2>
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="flex-1 flex flex-col justify-center p-6 md:p-10">
+          <div className="flex-[1] flex flex-col justify-center p-6 md:p-10 bg-white rounded text-secondary">
             <h3 className="text-2xl font-bold mb-2">{service.heading}</h3>
             <p className="text-lg">{service.text}</p>
           </div>

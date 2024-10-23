@@ -4,14 +4,14 @@ import ParticlesComponent from './Particle/ParticlesComponent';
 
 const AboutUs = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative min-h-screen mb-10">
       <ParticlesComponent />
       <div className="absolute inset-0 flex flex-col items-center p-6 z-10 bg-opacity-80"> {/* Adjust the opacity as needed */}
         <h2 className="text-4xl font-bold mb-6" style={{ color: '#10375C' }}>
           About <span className="text-[#EB8317]">Aplura GmbH</span>
         </h2>
 
-        <div className="max-w-3xl text-lg text-left text-[#10375C] mb-8">
+        <div className="max-w-3xl text-lg text-left text-secondary mb-8">
           <p className="mb-4">
             Aplura GmbH is a premier agricultural supplier specializing in high-quality potatoes for chip production and yellow corn for tortilla manufacturing. With a solid foundation built on over a decade of industry experience, we pride ourselves on our commitment to excellence and our service-oriented approach.
           </p>
@@ -20,7 +20,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-start max-w-3xl w-full">
+        <div className="flex flex-col items-start max-w-3xl w-full text-secondary">
           <div className="flex items-center mb-4">
             <FaBuilding className="text-3xl mr-4" style={{ color: '#10375C' }} />
             <span className="font-semibold">Company Overview</span>

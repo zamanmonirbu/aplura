@@ -8,7 +8,7 @@ import ParticlesComponent from "../Particle/ParticlesComponent";
 
 const CommitmentAndLogistics = () => {
   return (
-    <section className="relative py-10  overflow-hidden">
+    <section className="relative py-10  overflow-hidden bg-third my-1">
       {/* Background Particles */}
       <ParticlesComponent />
 
@@ -16,10 +16,10 @@ const CommitmentAndLogistics = () => {
         {/* Create a wrapper with flex-grow to ensure equal height */}
         <div className="flex w-full flex-col sm:flex-row">
           {/* Commitment to Quality Section */}
-          <div className="flex-1 p-4 flex flex-col justify-between bg-slate-100 rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
+          <div className="flex-1 p-4 flex flex-col justify-between bg-white rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-center text-[#10375C]">Our Quality Promise</h2>
-              <p className="mb-6 text-lg text-gray-700 text-justify">
+              <h2 className="text-3xl font-bold mb-4 text-center text-secondary">Our Quality Promise</h2>
+              <p className="mb-6 text-lg text-secondary text-justify">
                 At Aplura, we are dedicated to maintaining the highest standards of quality in our products. Our rigorous testing and quality control measures ensure that every product meets our stringent guidelines. 
                 We believe that quality is not just about meeting customer expectations but exceeding them. Our team continuously monitors the production process, conducts regular audits, and implements improvements based on feedback.
               </p>
@@ -27,48 +27,48 @@ const CommitmentAndLogistics = () => {
             <div>
               <div className="flex items-center mb-4">
                 <FaCheckCircle className="text-green-500 text-3xl mr-2" />
-                <span className="font-semibold text-lg text-[#10375C]">Stringent Testing Protocols</span>
+                <span className="font-semibold text-lg text-secondary">Stringent Testing Protocols</span>
               </div>
               <div className="flex items-center mb-4">
                 <FaRegClipboard className="text-blue-500 text-3xl mr-2" />
-                <span className="font-semibold text-lg text-[#10375C]">Comprehensive Quality Control</span>
+                <span className="font-semibold text-lg text-secondary">Comprehensive Quality Control</span>
               </div>
               <div className="flex items-center mb-4">
                 <FaShippingFast className="text-yellow-500 text-3xl mr-2" />
-                <span className="font-semibold text-lg text-[#10375C]">Fast Delivery</span>
+                <span className="font-semibold text-lg text-secondary">Fast Delivery</span>
               </div>
             </div>
           </div>
 
           {/* Logistics and Compliance Section */}
-          <div className="flex-1 p-4 flex flex-col justify-between bg-slate-100 rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
+          <div className="flex-1 p-4 flex flex-col justify-between bg-white rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-center text-[#10375C]">Logistics & Compliance</h2>
-              <p className="mb-6 text-lg text-gray-700 text-justify">
+              <h2 className="text-3xl font-bold mb-4 text-center text-secondary">Logistics & Compliance</h2>
+              <p className="mb-6 text-lg text-secondary text-justify">
                 Aplura specializes in international logistics and customs compliance, ensuring efficient and timely delivery of our products. Our logistics capabilities include strategic partnerships with trusted carriers, advanced tracking systems, and a dedicated team that monitors shipments to guarantee optimal performance and customer satisfaction. With a focus on sustainability, we continuously seek innovative solutions to minimize our environmental impact while maintaining high service standards.        
               </p>
             </div>
-            <ul className="list-disc mb-6 text-lg text-gray-700">
+            <ul className="list-disc mb-6 text-lg text-secondary">
               <li className="flex items-center mb-2">
                 <FaTruck className="text-blue-500 mr-2 text-3xl my-2 " />
-                <span className="font-semibold text-[#10375C]">Reliable transportation solutions</span>
+                <span className="font-semibold text-secondary">Reliable transportation solutions</span>
               </li>
               <li className="flex items-center mb-2">
                 <FaGlobe className="text-green-500 mr-2 font-semibold text-3xl my-2" />
-                <span className="font-semibold text-[#10375C]">Expertise in global shipping and logistics</span>
+                <span className="font-semibold text-secondary">Expertise in global shipping and logistics</span>
               </li>
               <li className="flex items-center mb-2">
                 <FaFileContract className="text-yellow-500 mr-2 font-semibold text-3xl my-2" />
-                <span className="font-semibold text-[#10375C]">Compliance with international customs regulations</span>
+                <span className="font-semibold text-secondary">Compliance with international customs regulations</span>
               </li>
             </ul>
           </div>
 
           {/* Certification Section with Carousel */}
-          <div className="flex-1 p-4 flex flex-col justify-between bg-slate-100 rounded-lg shadow-lg h-full">
+          <div className="flex-1 p-4 flex flex-col justify-between bg-white rounded-lg shadow-lg h-full">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-center text-[#10375C]">Certification</h2>
-              <p className="mb-6 text-lg text-gray-700 text-justify">
+              <h2 className="text-3xl font-bold mb-4 text-center text-secondary">Certification</h2>
+              <p className="mb-6 text-lg text-secondary text-justify">
                 Our certifications reflect our commitment to maintaining the highest standards in the agricultural industry. These accreditations ensure that our processes and products meet both national and international quality benchmarks.
               </p>
             </div>

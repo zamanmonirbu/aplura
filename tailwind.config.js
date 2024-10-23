@@ -17,7 +17,8 @@ export default {
         secondary:'#65a765', //brown dart
         third:'#0F2C4F', //main
         fourth:'#FFFFFF', //white
-        fifth:'#0B2B3C' //deep
+        fifth:'#0B2B3C',   //deep
+        sixth:'#EB8317'
         
       },
     },

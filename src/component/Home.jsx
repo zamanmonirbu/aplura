@@ -5,8 +5,8 @@ import CommitmentAndLogistics from "./HomePage/CommitmentAndLogistics";
 import ImageCarousel from "./HomePage/ImageCarousel";
 import ProductOfferings from "./HomePage/ProductOfferings";
 import WhereWeDeliver from "./HomePage/WhereWeDeliver";
-// import Gallery from "./ImageAndTextSection";
-// import CountryMap from "./HomePage/CountryMap";
+import OurServices from "./GalleryImages";
+
 
 
 const Home = () => {
@@ -18,10 +18,9 @@ const Home = () => {
       <CommitmentAndLogistics />
       <WhereWeDeliver />
       <HomeAboutUs/>
-      {/* <CountryMap/> */}
+      <OurServices/>
       <FAQs/>
-      {/* <Gallery/> */}
-    </div>
+      </div>
   );
 };
 

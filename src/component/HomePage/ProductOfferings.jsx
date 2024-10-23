@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import potatoImage from "../../images/potatoSub.jpg"; // Image for potatoes
 import cornImage from "../../images/cornssub.jpg"; // Image for corn
 import seedImage from "../../images/potetoSub.jpeg"; // Image for potato seeds
-import ParticlesComponent from "../Particle/ParticlesComponent";
 
 const products = [
   {
@@ -50,7 +49,7 @@ const ProductOfferings = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } // Trigger when 10% of the component is in view
+      { threshold: 0.5 } // Trigger when 50% of the component is in view
     );
 
     if (sectionRef.current) {
@@ -69,16 +68,13 @@ const ProductOfferings = () => {
       ref={sectionRef}
       className={`py-20 min-h-screen flex justify-center items-center relative transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
-      {/* Use your ParticlesComponent here */}
-      <ParticlesComponent />
-      
-      <div className="container mx-auto text-center bg-third p-10 rounded-lg shadow-lg relative z-10">
+      <div className="container mx-auto text-center bg-third p-5 rounded-lg shadow-lg relative z-10">
         <h2 className="text-4xl font-bold mb-8 text-fourth">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto"
+              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs mx-auto"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
@@ -89,12 +85,12 @@ const ProductOfferings = () => {
                 }}
               ></div>
               <div className="relative z-10 text-left text-third p-4">
-                <h3 className="text-2xl font-semibold mb-2">{product.title}</h3>
-                <p className="mb-4 text-md">{product.description}</p>
-                <h4 className="font-semibold text-xl">Features:</h4>
+                <h3 className="text-xl md:text-2xl font-semibold mb-2">{product.title}</h3>
+                <p className="mb-4 text-sm md:text-md">{product.description}</p>
+                <h4 className="font-semibold text-lg">Features:</h4>
                 <ul className="list-disc list-inside mb-4">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700 text-md">
+                    <li key={idx} className="text-gray-700 text-sm md:text-md">
                       {feature}
                     </li>
                   ))}

@@ -63,7 +63,8 @@ const GalleryImages = () => {
               className="bg-cover bg-center w-full h-full rounded-md"
               style={{
                 backgroundImage: `url(${service.imageUrl})`,
-                backgroundAttachment: window.innerWidth >= 768 ? 'fixed' : 'scroll', // Conditional backgroundAttachment
+                // backgroundAttachment: window.innerWidth >= 768 ? 'fixed' : 'scroll', 
+                backgroundAttachment: 'fixed', 
               }}
             ></div>
 
@@ -87,4 +88,3 @@ const GalleryImages = () => {
 };
 
 export default GalleryImages;
-  

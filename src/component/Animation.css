@@ -11,3 +11,9 @@
     transform: translateY(0); /* Move to the original position */
   }
   
+  /* Optional: Adjust to give more space on larger screens */
+@media (min-width: 1024px) {
+  .gallery-img {
+    max-width: 100%;
+  }
+}

@@ -41,21 +41,22 @@ const Animation = () => {
   return (
     <div className='bg-third'>
 
-    <div className="flex flex-col justify-center items-center min-h-screen mx-auto max-w-[54%] ">
-      {images.map((img, index) => (
-        <div 
-          key={index} 
-          className={`w-1/2 my-5 ${index % 2 === 0 ? 'self-start' : 'self-end'}`}
-        >
-          <img 
-            src={img} 
-            alt={`Gallery ${index}`} 
-            className="gallery-img w-full h-auto" 
-            ref={el => (imageRefs.current[index] = el)} // Attach ref to each image
-          />
-        </div>
-      ))}
+<div className="flex flex-col justify-center items-center min-h-screen mx-auto max-w-[80%]">
+  {images.map((img, index) => (
+    <div 
+      key={index} 
+      className={`w-3/4 my-5 ${index % 2 === 0 ? 'self-start' : 'self-end'}`} // Adjusted width to 3/4 for larger images
+    >
+      <img 
+        src={img} 
+        alt={`Gallery ${index}`} 
+        className="gallery-img w-full h-auto" 
+        ref={el => (imageRefs.current[index] = el)}
+      />
     </div>
+  ))}
+</div>
+
     </div>
   );
 };

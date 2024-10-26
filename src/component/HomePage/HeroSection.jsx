@@ -13,7 +13,7 @@ const ImageUpDown = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           zIndex: -1, // Ensure background is behind content
-          animation: "scaleRotateBackground 60s infinite",
+          animation: "scaleRotateBackground 45s infinite",
         }}
       />
 

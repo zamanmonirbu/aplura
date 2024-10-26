@@ -1,16 +1,16 @@
 import { MdPhone, MdEmail, MdLocationOn } from 'react-icons/md';
 import { FaHeadset } from 'react-icons/fa';
-import ParticlesComponent from './Particle/ParticlesComponent';
+// import ParticlesComponent from './Particle/ParticlesComponent';
 
 
 const Support = () => {
   return (
     <div className="relative min-h-screen">
       {/* ParticlesComponent as Background */}
-      <ParticlesComponent />
+      {/* <ParticlesComponent /> */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-6 z-10  bg-opacity-90"> {/* Adjust opacity for better readability */}
         <h2 className="text-4xl font-bold mb-6" style={{ color: '#10375C' }}>
-        Customer <span className="text-[#EB8317]">Support</span>
+        Customer Support
         </h2>
 
         <div className="max-w-3xl text-lg text-left text-secondary mb-8">

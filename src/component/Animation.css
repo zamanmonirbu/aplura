@@ -1,13 +1,15 @@
 /* Initially hide the image */
 .gallery-img {
-    opacity: 0;
-    transform: translateY(20px); /* Start position slightly below */
-    transition: opacity 4s ease, transform 4s ease;
-  }
-  
-  /* Fade-in effect when image enters viewport */
-  .gallery-img.fade-in {
-    opacity: 1;
-    transform: translateY(0); /* Move to the original position */
-  }
-  
+  width: 80%; /* Adjust the width as needed for smaller size */
+  max-width: 400px; /* Set max-width to control the image's final size */
+  opacity: 0;
+  transform: translateY(30px); /* Start position slightly below */
+  transition: opacity 1s ease, transform 1s ease;
+  object-fit: cover; /* Ensures aspect ratio is maintained */
+}
+
+/* Fade-in effect when image enters viewport */
+.gallery-img.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Move to the original position */
+}

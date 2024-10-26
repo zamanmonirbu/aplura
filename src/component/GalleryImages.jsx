@@ -43,41 +43,39 @@ const services = [
     imageUrl: bg6,
   },
 ];
-
 const GalleryImages = () => {
   return (
-    <div className="flex flex-col w-[90%] md:w-full mx-auto bg-third">
-      <p className="text-4xl font-bold text-center my-10 text-white">
-        Image <span className="text-secondary">Gallery</span>
+    <div className="flex flex-col w-[80%] mx-auto "> {/* Reduced width for padding */}
+      <p className="text-4xl font-bold text-center my-10 text-secondary">
+        Image Gallery
       </p>
       {services.map((service, index) => (
         <div
           className={`flex flex-col md:flex-row ${
             index % 2 === 0 ? 'md:flex-row-reverse' : ''
-          } md:min-h-[350px] mb-10`}
+          } md:min-h-[350px] `} /* Add margin for spacing */
           key={index}
         >
           {/* Image Section */}
-          <div className="relative flex md:flex-[2] h-[200px] md:h-[400px] overflow-hidden w-full">
+          <div className="relative md:w-1/2 h-[200px] md:h-[400px] overflow-hidden w-full">
             <div
               className="bg-cover bg-center w-full h-full rounded-md"
               style={{
                 backgroundImage: `url(${service.imageUrl})`,
-                // backgroundAttachment: window.innerWidth >= 768 ? 'fixed' : 'scroll', 
-                backgroundAttachment: 'fixed', 
+                backgroundAttachment: 'fixed',
               }}
             ></div>
 
             {/* Title over image */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-white text-2xl md:text-3xl font-bold bg-black bg-opacity-50 px-4 py-2 rounded-md w-[90%] md:w-[70%] text-center">
+            <div className="absolute inset-0 flex items-center justify-center ">
+              <h2 className="text-secondary text-2xl md:text-3xl font-bold  px-4 py-2 rounded-md w-[90%] md:w-[70%] text-center">
                 {service.title}
               </h2>
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="flex md:flex-[1] flex-col justify-center p-4 md:p-10 bg-white rounded text-secondary w-full">
+          <div className="md:w-1/2 flex flex-col justify-center p-4 md:p-10 bg-gray-100 rounded text-secondary w-full">
             <h3 className="text-xl md:text-2xl font-bold mb-2">{service.heading}</h3>
             <p className="text-base md:text-lg">{service.text}</p>
           </div>

@@ -1,4 +1,4 @@
-import ParticlesComponent from "./Particle/ParticlesComponent";
+// import ParticlesComponent from "./Particle/ParticlesComponent";
 import PotatoSeedsProducts from "./SecondPage/PotatoSeedsProducts";
 import PotatoVariations from "./SecondPage/PotatoVariations";
 import YellowCornProducts from "./SecondPage/YellowCornProducts";
@@ -6,7 +6,7 @@ import YellowCornProducts from "./SecondPage/YellowCornProducts";
 const ViewAllProducts = () => {
   return (
     <div className="products-container">
-      <ParticlesComponent /> 
+      {/* <ParticlesComponent />  */}
       <div className="content">
         <PotatoVariations />
         <YellowCornProducts />

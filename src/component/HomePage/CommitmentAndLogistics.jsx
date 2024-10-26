@@ -4,19 +4,19 @@ import certificationImage1 from "../../images/cf1.png"; // Add more certificatio
 import certificationImage2 from "../../images/cf2.jpg"; // Replace with actual image paths
 import certificationImage3 from "../../images/cf3.png"; // Replace with actual image paths
 import { FaCheckCircle, FaFileContract, FaGlobe, FaRegClipboard, FaShippingFast, FaTruck } from "react-icons/fa";
-import ParticlesComponent from "../Particle/ParticlesComponent";
+// import ParticlesComponent from "../Particle/ParticlesComponent";
 
 const CommitmentAndLogistics = () => {
   return (
-    <section className="relative py-10  overflow-hidden bg-third my-1">
+    <section className="relative py-10  overflow-hidden  my-1">
       {/* Background Particles */}
-      <ParticlesComponent />
+      {/* <ParticlesComponent /> */}
 
       <div className="container mx-auto flex flex-wrap relative z-10"> {/* Ensure this has a higher z-index */}
         {/* Create a wrapper with flex-grow to ensure equal height */}
         <div className="flex w-full flex-col sm:flex-row">
           {/* Commitment to Quality Section */}
-          <div className="flex-1 p-4 flex flex-col justify-between bg-white rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
+          <div className="flex-1 p-4 flex flex-col justify-between bg-gray-100  rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
             <div>
               <h2 className="text-3xl font-bold mb-4 text-center text-secondary">Our Quality Promise</h2>
               <p className="mb-6 text-lg text-secondary text-justify">
@@ -41,7 +41,7 @@ const CommitmentAndLogistics = () => {
           </div>
 
           {/* Logistics and Compliance Section */}
-          <div className="flex-1 p-4 flex flex-col justify-between bg-white rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
+          <div className="flex-1 p-4 flex flex-col justify-between bg-gray-100  rounded-lg shadow-lg h-full mr-2 mb-4 sm:mb-0 sm:mr-2">
             <div>
               <h2 className="text-3xl font-bold mb-4 text-center text-secondary">Logistics & Compliance</h2>
               <p className="mb-6 text-lg text-secondary text-justify">
@@ -65,7 +65,7 @@ const CommitmentAndLogistics = () => {
           </div>
 
           {/* Certification Section with Carousel */}
-          <div className="flex-1 p-4 flex flex-col justify-between bg-white rounded-lg shadow-lg h-full">
+          <div className="flex-1 p-4 flex flex-col justify-between bg-gray-100  rounded-lg shadow-lg h-full">
             <div>
               <h2 className="text-3xl font-bold mb-4 text-center text-secondary">Certification</h2>
               <p className="mb-6 text-lg text-secondary text-justify">

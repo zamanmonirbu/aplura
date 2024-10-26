@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import ParticlesComponent from "../Particle/ParticlesComponent";
-import image1 from "../../images/gp1.png";
+// import ParticlesComponent from "../Particle/ParticlesComponent";
+import image1 from "../../images/pot1.png";
 import image2 from "../../images/gp2.png";
 import image3 from "../../images/gp3.png";
-import image4 from "../../images/gp4.png";
+import image4 from "../../images/pot2.png";
+import image5 from "../../images/pot3.png";
 import './ImageCarousel.css';
 
-const images = [image1, image2, image3, image4];
+const images = [image1, image2, image3, image4,image5];
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -73,7 +74,7 @@ const ImageCarousel = () => {
   return (
     <div className="carousel-container bg-[#D9D9D9] relative" ref={carouselRef}>
       {/* Add the ParticlesComponent as a background */}
-      <ParticlesComponent />
+      {/* <ParticlesComponent /> */}
       
       <div className="w-full max-w-8xl mx-auto p-4 relative z-10">
         {/* Image display with fade transition */}
@@ -86,13 +87,13 @@ const ImageCarousel = () => {
         {/* Next and Prev buttons with icons */}
         <button
           onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-third text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-secondary text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
         >
           <FaChevronLeft />
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-third text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-secondary text-white px-3 py-2 rounded hover:bg-[#8ea5ba] z-20"
         >
           <FaChevronRight />
         </button>

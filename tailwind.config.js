@@ -14,8 +14,8 @@ export default {
       },
       colors: {
         primary:'#5C4033',  //light green
-        secondary:'#593E31', //brown dart
-        seconHover:'#593E49', //brown dart
+        secondary:'#231515', //brown dart
+        seconHover:'#4a3731', //brown dart
         // third:'#0F2C4F', //main
         third:'#7E8C4F', //main
         fourth:'#FFFFFF', //white

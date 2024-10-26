@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ParticlesComponent from "./Particle/ParticlesComponent";
+// import ParticlesComponent from "./Particle/ParticlesComponent";
 
 const FAQs = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -64,12 +64,8 @@ const FAQs = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-third ">
-      {/* Particles Component in the background */}
-      <ParticlesComponent />
-
-      {/* FAQs Content */}
-      <div className="relative z-10 max-w-5xl mx-auto my-1 p-5 bg-white  border rounded shadow">
+    <div className="relative min-h-screen ">
+      <div className="relative z-10 w-[80%] mx-auto my-1 p-5 bg-white  border rounded shadow">
         <h2 className="text-2xl font-semibold text-center mb-5">
           Frequently Asked Questions
         </h2>

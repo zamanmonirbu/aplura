@@ -13,7 +13,7 @@ const ImageUpDown = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           zIndex: -1, // Ensure background is behind content
-          animation: "scaleRotateBackground 30s infinite",
+          animation: "scaleRotateBackground 60s infinite",
         }}
       />
 
@@ -40,7 +40,7 @@ const ImageUpDown = () => {
             transform: scale(1);
           }
           50% {
-            transform: scale(1.2);
+            transform: scale(1.1);
           }
           100% {
             transform: scale(1);
@@ -54,7 +54,7 @@ const ImageUpDown = () => {
 const ComingSoon = () => {
   return (
     <div className="coming-soon">
-      <p className="text-center">Fertilizing in process...</p>
+      {/* <p className="text-center">Fertilizing in process...</p> */}
       <svg
         xmlns="http://www.w3.org/svg"
         viewBox="0 0 300 150"

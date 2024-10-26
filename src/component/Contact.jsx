@@ -1,15 +1,15 @@
 import { MdPhone, MdLocationOn, MdEmail } from "react-icons/md";
 import { FaBuilding } from "react-icons/fa";
-import ParticlesComponent from "./Particle/ParticlesComponent";
+// import ParticlesComponent from "./Particle/ParticlesComponent";
 
 const Contact = () => {
   return (
     <div className="relative h-screen">
-      <ParticlesComponent />
+      {/* <ParticlesComponent /> */}
       <div className="absolute inset-0 flex flex-col justify-center items-center p-6 z-10 text-center"> {/* z-10 to ensure text is on top */}
         <div className="w-full max-w-md mb-4">
           <h2 className="text-2xl text-left font-bold mb-2" style={{ color: "#10375C" }}>
-            Get in Touch with <span className="text-[#EB8317]">Aplura GmbH</span>
+            Get in Touch with Aplura GmbH
           </h2>
           <p className="mb-8 text-lg text-secondary text-left">
             We value your feedback and are here to assist you. Please reach out to us using the contact details below.

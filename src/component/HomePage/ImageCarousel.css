@@ -32,3 +32,21 @@
     overflow: visible; /* Ensure arrows are not cut off by overflow */
   }
   
+
+
+  .carousel-container {
+    position: relative;
+  }
+  
+  .carousel-button {
+    position: absolute;
+  }
+  
+  /* Hide buttons on screens smaller than 768px (small devices) */
+  @media (max-width: 768px) {
+    .carousel-button {
+      display: none;
+    }
+  }
+  
+  

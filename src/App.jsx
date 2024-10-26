@@ -17,7 +17,7 @@ import ViewAllProducts from "./component/ViewAllProducts";
 const App = () => {
   return (
     <div>
-      <ContactInfo />
+      {/* <ContactInfo /> */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

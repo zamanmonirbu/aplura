@@ -45,13 +45,13 @@ const ProductOfferings = () => {
       className="py-20 bg-cover bg-center min-h-screen flex justify-center items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="container mx-auto text-center bg-third p-10 rounded-lg shadow-lg">
+      <div className="container mx-auto text-center bg-secondary p-1 rounded-lg shadow-lg">
         <h2 className="text-4xl font-bold mb-8 text-white">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto" // Adjust max-w for wider divs
+              className="relative rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto" // Adjust max-w for wider divs
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"

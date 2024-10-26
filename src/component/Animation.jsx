@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './Animation.css'; 
 import image1 from '../images/chips1.webp';
 import image2 from '../images/chips2.webp';
@@ -7,7 +7,7 @@ import image4 from '../images/chips4.webp';
 import image5 from '../images/Aplora.jpeg';
 
 const images = [
-  image1, image2, image3, image4, image5
+  image1, image2, image3, image4
 ];
 
 const Animation = () => {
@@ -39,9 +39,7 @@ const Animation = () => {
   }, []);
 
   return (
-    <div className='bg-third'>
-
-    <div className="flex flex-col justify-center items-center min-h-screen mx-auto max-w-[54%] ">
+   <div className="flex flex-col justify-center items-center min-h-screen mx-auto max-w-[54%] ">
       {images.map((img, index) => (
         <div 
           key={index} 
@@ -51,12 +49,13 @@ const Animation = () => {
             src={img} 
             alt={`Gallery ${index}`} 
             className="gallery-img w-full h-auto" 
-            ref={el => (imageRefs.current[index] = el)} // Attach ref to each image
+            ref={el => (imageRefs.current[index] = el)} 
           />
         </div>
       ))}
+      <img src={image5} alt="final image" className='w-[60%] h-auto rounded-md mb-10 sm:mb-4 lg:mb-6 xl:mb-8'/>
     </div>
-    </div>
+   
   );
 };
 

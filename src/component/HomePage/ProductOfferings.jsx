@@ -45,7 +45,7 @@ const ProductOfferings = () => {
       className="py-20 bg-cover  bg-center min-h-screen flex justify-center items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="container mx-auto text-center bg-secondary p-8 rounded-lg shadow-lg">
+      <div className="container mx-auto text-center bg-secondary p-1 sm:p-2 md:p-6 xl:p-8 rounded-lg shadow-lg">
         <h2 className="text-4xl font-bold mb-8 text-white">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {products.map((product, index) => (

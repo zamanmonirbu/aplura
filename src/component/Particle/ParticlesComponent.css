@@ -1,0 +1,15 @@
+#tsparticles canvas {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Hide particles on mobile screens */
+@media (max-width: 768px) {
+  #tsparticles {
+    display: none;
+  }
+}

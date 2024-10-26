@@ -80,7 +80,6 @@ const ComingSoon = () => {
           />
         </path>
       </svg>
-      <p className="text-center">Sustainability and Quality will be back online soon</p>
     </div>
   );
 };

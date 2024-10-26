@@ -15,7 +15,7 @@ const MapView = () => {
 
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center bg-fixed transition-opacity duration-300 w-[90%] max-w-screen-lg mx-auto"
+      className="relative min-h-screen bg-cover bg-center bg-fixed transition-opacity duration-300 w-[80%] mx-auto"
       style={{
         backgroundImage: `url(${map})`,
         backgroundRepeat: 'no-repeat',

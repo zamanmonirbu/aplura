@@ -1,5 +1,5 @@
 import bg from "../../images/b1.jpg";
-import './HeroSection.css';
+import "./HeroSection.css";
 
 const ImageUpDown = () => {
   return (
@@ -19,14 +19,14 @@ const ImageUpDown = () => {
 
       {/* Scrollable Content */}
       <div className="relative z-10 flex flex-col justify-start items-center h-full p-4 overflow-auto">
-        <div className="flex flex-col items-center min-h-screen mt-[7%]">
-          <p className="text-[#DDE0E0] text-5xl text-center uppercase">
+        <div className="into flex flex-col items-center min-h-screen mt-[7%]">
+          <p className="text-[#DDE0E0] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center uppercase">
             Innovation Starts in the Soil
           </p>
-          <p className="text-[#F9F9F9] text-3xl text-center my-4">
+          <p className="text-[#F9F9F9] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center my-4">
             Your Success
           </p>
-          <p className="text-[#FFFAFA] text-5xl text-center font-bold">
+          <p className="text-[#FFFAFA] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold">
             Our Best Yield
           </p>
         </div>

@@ -45,7 +45,7 @@ const services = [
 ];
 const GalleryImages = () => {
   return (
-    <div className="flex flex-col w-[80%] mx-auto "> {/* Reduced width for padding */}
+    <div className="flex flex-col w-[80%] mx-auto"> {/* Reduced width for padding */}
       <p className="text-4xl font-bold text-center my-10 text-secondary">
         Image Gallery
       </p>
@@ -53,13 +53,13 @@ const GalleryImages = () => {
         <div
           className={`flex flex-col md:flex-row ${
             index % 2 === 0 ? 'md:flex-row-reverse' : ''
-          } md:min-h-[350px] `} /* Add margin for spacing */
+          } md:min-h-[350px]`} /* Add margin for spacing */
           key={index}
         >
           {/* Image Section */}
           <div className="relative md:w-1/2 h-[200px] md:h-[400px] overflow-hidden w-full">
             <div
-              className="bg-cover bg-center w-full h-full rounded-md"
+              className="bg-contain bg-center bg-no-repeat w-full h-full rounded-md"
               style={{
                 backgroundImage: `url(${service.imageUrl})`,
                 backgroundAttachment: 'fixed',
@@ -67,8 +67,8 @@ const GalleryImages = () => {
             ></div>
 
             {/* Title over image */}
-            <div className="absolute inset-0 flex items-center justify-center ">
-              <h2 className="text-secondary text-2xl md:text-3xl font-bold  px-4 py-2 rounded-md w-[90%] md:w-[70%] text-center">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <h2 className="text-secondary text-2xl md:text-3xl font-bold px-4 py-2 rounded-md w-[90%] md:w-[70%] text-center">
                 {service.title}
               </h2>
             </div>
@@ -84,5 +84,6 @@ const GalleryImages = () => {
     </div>
   );
 };
+
 
 export default GalleryImages;

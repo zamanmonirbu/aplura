@@ -1,4 +1,4 @@
-import backgroundImage from "../../images/p5.jpg"; // Replace with your overall background image path
+import backgroundImage from "../../images/ap5.jpg"; // Replace with your overall background image path
 import potatoImage from "../../images/potatoSub.jpg"; // Replace with the image for potatoes
 import cornImage from "../../images/cornssub.jpg"; // Replace with the image for corn
 import seedImage from "../../images/potetoSub.jpeg"; // Replace with the image for potato seeds
@@ -42,16 +42,16 @@ const products = [
 const ProductOfferings = () => {
   return (
     <section
-      className="py-20 bg-cover  bg-center min-h-screen flex justify-center items-center"
+      className="py-20 bg-cover bg-center min-h-screen flex justify-center items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="container mx-auto text-center bg-secondary p-1 sm:p-2 md:p-6 xl:p-8 rounded-lg shadow-lg">
-        <h2 className="text-4xl font-bold mb-8 text-white">Our Services</h2>
+      <div className="container mx-auto text-center p-1 sm:p-2 md:p-6 xl:p-8">
+        <h2 className="text-4xl font-bold mb-8 text-secondary">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {products.map((product, index) => (
             <div
               key={index}
-              className="relative rounded-lg shadow-lg transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto" // Adjust max-w for wider divs
+              className="relative rounded-lg shadow-xl transition-transform transform hover:scale-105 overflow-hidden group bg-white max-w-xs sm:max-w-md mx-auto" 
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"

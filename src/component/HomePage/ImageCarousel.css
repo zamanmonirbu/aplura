@@ -42,6 +42,8 @@
     position: absolute;
   }
   
+  
+
   /* Hide buttons on screens smaller than 768px (small devices) */
   @media (max-width: 768px) {
     .carousel-button {

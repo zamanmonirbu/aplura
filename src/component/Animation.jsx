@@ -39,6 +39,7 @@ const Animation = () => {
   }, []);
 
   return (
+    <div className='bg-gray-100'>
    <div className="flex flex-col justify-center items-center min-h-screen mx-auto max-w-[54%] ">
       {images.map((img, index) => (
         <div 
@@ -55,7 +56,7 @@ const Animation = () => {
       ))}
       <img src={image5} alt="final image" className='w-[60%] h-auto rounded-md mb-10 sm:mb-4 lg:mb-6 xl:mb-8'/>
     </div>
-   
+    </div>
   );
 };
 

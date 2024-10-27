@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 // import ParticlesComponent from "../Particle/ParticlesComponent";
-import image1 from "../../images/pot1.png";
-import image2 from "../../images/gp2.png";
-import image3 from "../../images/gp3.png";
-import image4 from "../../images/pot2.png";
-import image5 from "../../images/pot3.png";
+// import image1 from "../../images/pot1.png";
+// import image2 from "../../images/gp2.png";
+import image3 from "../../images/sn4.png";
+import image4 from "../../images/sn1.png";
+import image5 from "../../images/sn2.png";
+import image6 from "../../images/sn3.png";
 import './ImageCarousel.css';
 
-const images = [image1, image2, image3, image4,image5];
+const images = [image3, image4,image5,image6];
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,7 +73,7 @@ const ImageCarousel = () => {
   }, []);
 
   return (
-    <div className="carousel-container bg-[#D9D9D9] relative" ref={carouselRef}>
+    <div className="carousel-container bg-white relative" ref={carouselRef}>
       {/* Add the ParticlesComponent as a background */}
       {/* <ParticlesComponent /> */}
       

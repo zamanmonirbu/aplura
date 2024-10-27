@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import map from '../../images/MapChart_Map.png';
 import 'leaflet/dist/leaflet.css';
 
@@ -14,16 +14,14 @@ const MapView = () => {
   };
 
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center bg-fixed transition-opacity duration-300 w-[80%] mx-auto"
-      style={{
-        backgroundImage: `url(${map})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-      }}
-    >
+    <div className="relative w-full sm:w-[90%] md:w-[80%] mx-auto">
+      {/* Image displayed normally */}
+      <img
+        src={map}
+        alt="Map"
+        className="w-full h-auto object-cover transition-opacity duration-300"
+      />
+
       {/* Hover Effect to change opacity and show button */}
       <div className="absolute inset-0 hover:bg-black hover:bg-opacity-50 transition duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
         <button
@@ -36,7 +34,7 @@ const MapView = () => {
 
       {/* Full-screen Modal for Image View */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
           <div
             className="absolute top-4 right-4 text-2xl md:text-4xl font-bold text-white cursor-pointer z-50"
             onClick={handleCloseModal}
@@ -46,7 +44,7 @@ const MapView = () => {
 
           {/* Responsive Background Image Full-Screen */}
           <div
-            className="w-full h-full bg-center bg-cover md:max-w-screen-lg mx-auto"
+            className="w-full h-full bg-center bg-cover max-w-screen mx-auto"
             style={{
               backgroundImage: `url(${map})`,
               backgroundPosition: 'center',

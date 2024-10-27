@@ -9,7 +9,7 @@ const Support = () => {
       {/* ParticlesComponent as Background */}
       {/* <ParticlesComponent /> */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-6 z-10  bg-opacity-90"> {/* Adjust opacity for better readability */}
-        <h2 className="text-4xl font-bold mb-6" style={{ color: '#10375C' }}>
+        <h2 className="text-4xl font-bold mb-6 text-secondary" >
         Customer Support
         </h2>
 
@@ -21,22 +21,22 @@ const Support = () => {
 
         <div className="flex flex-col items-start max-w-3xl w-full">
           <div className="flex items-center mb-4">
-            <FaHeadset className="text-3xl mr-4" style={{ color: '#10375C' }} />
+            <FaHeadset className="text-3xl mr-4 text-secondary"  />
             <span className="font-semibold">Support Contact</span>
           </div>
 
           <div className="flex items-center mb-4">
-            <MdPhone className="text-3xl mr-4" style={{ color: '#10375C' }} />
+            <MdPhone className="text-3xl mr-4 text-secondary"  />
             <span>Phone: <span className="font-semibold">217-903-5999</span></span>
           </div>
 
           <div className="flex items-center mb-4">
-            <MdEmail className="text-3xl mr-4" style={{ color: '#10375C' }} />
+            <MdEmail className="text-3xl mr-4 text-secondary"  />
             <span>Email: <a href="mailto:support@aplura.com" className="underline" >support@aplura.com</a></span>
           </div>
 
           <div className="flex items-center mb-4">
-            <MdLocationOn className="text-3xl mr-4" style={{ color: '#10375C' }} />
+            <MdLocationOn className="text-3xl mr-4 text-secondary"  />
             <span>Address: <span className="font-semibold">Diepholz, Germany</span></span>
           </div>
         </div>

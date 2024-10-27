@@ -19,29 +19,31 @@ const PotatoVariations = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
-    setHoveredIndex(index); // Set the index on mouse enter
+    setHoveredIndex(index);
   };
 
   const handleMouseLeave = () => {
-    setHoveredIndex(null); // Clear the index on mouse leave
+    setHoveredIndex(null);
   };
 
   return (
     <div className="p-4">
-        <h2 className="text-2xl font-bold text-center bg-secondary p-4 text-white my-8 mb-16">Potato Variations</h2>
+      <h2 className="text-2xl font-bold text-center bg-secondary p-4 text-white my-8 mb-16">Potato Variations</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {Variations.map((potato, index) => (
           <div
             key={index}
-            className="relative group cursor-pointer"
-            onMouseEnter={() => handleMouseEnter(index)} // Handle mouse enter
-            onMouseLeave={handleMouseLeave} // Handle mouse leave
+            className="relative group cursor-pointer flex flex-col items-center"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
           >
-            <img
-              src={potato.image}
-              alt={potato.name}
-              className={`w-full h-auto transition duration-300 ${hoveredIndex === index ? 'filter blur-sm' : ''}`}
-            />
+            <div className="w-full max-w-xs min-h-[200px] max-h-[300px] overflow-hidden rounded-lg">
+              <img
+                src={potato.image}
+                alt={potato.name}
+                className={`w-full h-full object-cover transition duration-300 ${hoveredIndex === index ? 'filter blur-sm' : ''}`}
+              />
+            </div>
             <h3 className="text-center font-semibold mt-2">{potato.name}</h3>
             {hoveredIndex === index && (
               <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75 p-4 rounded">

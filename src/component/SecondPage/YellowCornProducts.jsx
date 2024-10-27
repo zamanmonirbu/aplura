@@ -31,15 +31,17 @@ const YellowCornProducts = () => {
         {CornProducts.map((product, index) => (
           <div
             key={index}
-            className="relative group cursor-pointer"
+            className="relative group cursor-pointer flex flex-col items-center"
             onMouseEnter={() => handleMouseEnter(index)} // Handle mouse enter
             onMouseLeave={handleMouseLeave} // Handle mouse leave
           >
-            <img
-              src={product.image}
-              alt={product.name}
-              className={`w-full h-auto transition duration-300 ${hoveredIndex === index ? 'filter blur-sm' : ''}`}
-            />
+            <div className="w-full max-w-xs min-h-[200px] max-h-[300px] overflow-hidden rounded-lg">
+              <img
+                src={product.image}
+                alt={product.name}
+                className={`w-full h-full object-cover transition duration-300 ${hoveredIndex === index ? 'filter blur-sm' : ''}`}
+              />
+            </div>
             <h3 className="text-center font-semibold mt-2">{product.name}</h3>
             {hoveredIndex === index && (
               <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75 p-4 rounded">

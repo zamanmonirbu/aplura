@@ -8,7 +8,7 @@ const Contact = () => {
       {/* <ParticlesComponent /> */}
       <div className="absolute inset-0 flex flex-col justify-center items-center p-6 z-10 text-center"> {/* z-10 to ensure text is on top */}
         <div className="w-full max-w-md mb-4">
-          <h2 className="text-2xl text-left font-bold mb-2" style={{ color: "#10375C" }}>
+          <h2 className="text-2xl text-left font-bold mb-2 text-secondary ">
             Get in Touch with Aplura GmbH
           </h2>
           <p className="mb-8 text-lg text-secondary text-left">
@@ -20,13 +20,13 @@ const Contact = () => {
           <tbody>
             <tr>
               <td className="py-4 flex items-center">
-                <FaBuilding className="text-3xl mr-4 text-[#10375C]" />
+                <FaBuilding className="text-3xl mr-4 text-secondary" />
                 <span className="font-semibold">Aplura GmbH</span>
               </td>
             </tr>
             <tr>
               <td className="py-4 flex items-center">
-                <MdPhone className="text-3xl mr-4 text-[#10375C]" />
+                <MdPhone className="text-3xl mr-4 text-secondary" />
                 <span>
                   Phone: <span className="font-semibold">217-903-5999</span>
                 </span>
@@ -34,7 +34,7 @@ const Contact = () => {
             </tr>
             <tr>
               <td className="py-4 flex items-center">
-                <MdLocationOn className="text-3xl mr-4 text-[#10375C]" />
+                <MdLocationOn className="text-3xl mr-4 text-secondary" />
                 <span>
                   Address: <span className="font-semibold">Diepholz, Germany</span>
                 </span>
@@ -42,7 +42,7 @@ const Contact = () => {
             </tr>
             <tr>
               <td className="py-4 flex items-center">
-                <MdEmail className="text-3xl mr-4 text-[#10375C]" />
+                <MdEmail className="text-3xl mr-4 text-secondary" />
                 <span>
                   Email: <a href="mailto:info@aplura.com" className="underline">info@aplura.com</a>
                 </span>

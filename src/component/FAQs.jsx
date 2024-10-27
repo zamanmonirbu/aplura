@@ -62,11 +62,10 @@ const FAQs = () => {
   const toggleAnswer = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
-
   return (
-    <div className="relative min-h-screen ">
-      <div className="relative z-10 w-[80%] mx-auto my-1 p-5 bg-white  border rounded shadow">
-        <h2 className="text-2xl font-semibold text-center mb-5">
+    <div className="relative min-h-screen flex justify-center items-center ">
+      <div className="w-full sm:w-[90%] md:w-[80%] mx-auto p-5 bg-white border rounded shadow">
+        <h2 className="text-2xl font-semibold text-center mb-5 text-secondary">
           Frequently Asked Questions
         </h2>
         {faqs.map((faq, index) => (
@@ -76,12 +75,10 @@ const FAQs = () => {
               onClick={() => toggleAnswer(index)}
             >
               <h3 className="text-lg font-medium">{faq.question}</h3>
-              <span className="text-xl">
-                {expandedIndex === index ? "-" : "+"}
-              </span>
+              <span className="text-xl">{expandedIndex === index ? "-" : "+"}</span>
             </div>
             {expandedIndex === index && (
-              <p className="text-secondary">{faq.answer}</p>
+              <p className="text-secondary mt-2">{faq.answer}</p>
             )}
           </div>
         ))}

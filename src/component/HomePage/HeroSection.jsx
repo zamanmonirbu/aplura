@@ -20,13 +20,13 @@ const ImageUpDown = () => {
       {/* Scrollable Content */}
       <div className="relative z-10 flex flex-col justify-start items-center h-full p-4 overflow-auto sm:h-[90vh] md:h-[80vh] lg:h-[70vh]">
         <div className="into flex flex-col items-center h--full mt-[7%] md:mt-[105px]">
-          <p className="text-[#DDE0E0] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center uppercase">
+          <p className="text-[#DDE0E0] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center uppercase opacity-0 animate-textFadeIn1">
             Innovation Starts in the Soil
           </p>
-          <p className="text-[#F9F9F9] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center my-4">
+          <p className="text-[#F9F9F9] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center my-4 opacity-0 animate-textFadeIn2">
             Your Success
           </p>
-          <p className="text-[#FFFAFA] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold md:mt-[40px] md:mb-[25px]">
+          <p className="text-[#FFFAFA] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold md:mt-[10px] md:mb-[25px] opacity-0 animate-textFadeIn3">
             Our Best Yield
           </p>
         </div>
@@ -36,15 +36,39 @@ const ImageUpDown = () => {
 
       <style>{`
         @keyframes scaleRotateBackground {
-          0% {
-            transform: scale(1);
-          }
-          50% {
-            transform: scale(1.1);
-          }
-          100% {
-            transform: scale(1);
-          }
+          0% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+          100% { transform: scale(1); }
+        }
+
+        @keyframes textFadeIn1 {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textFadeIn2 {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textFadeIn3 {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-textFadeIn1 {
+          animation: textFadeIn1 2s forwards;
+          animation-delay: 1s;
+        }
+        
+        .animate-textFadeIn2 {
+          animation: textFadeIn2 2s forwards;
+          animation-delay: 2.5s;
+        }
+        
+        .animate-textFadeIn3 {
+          animation: textFadeIn3 2s forwards;
+          animation-delay: 4s;
         }
       `}</style>
     </div>

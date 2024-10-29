@@ -2,7 +2,7 @@ import bgImage from '../images/Aplora.jpeg'; // Import the background image
 
 const HomeAboutUs = () => {
   return (
-    <div className="relative flex flex-col items-center p-5 bg-white text-third border rounded shadow w-full sm:w-[90%] md:w-[80%] max-w-screen-lg mx-auto">
+    <div className="relative flex flex-col items-center p-5 bg-white text-third border rounded shadow w-full sm:w-[90%] md:w-[80%] max-w-screen-lg mx-auto mb-8">
       {/* Background image with opacity effect and fixed attachment */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"

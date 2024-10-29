@@ -42,18 +42,18 @@ const ImageUpDown = () => {
         }
 
         @keyframes textFadeIn1 {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
+          0% { opacity: 0; transformm: translateY(20px); }
+          100% { opacity: 1; transformm: translateY(0); }
         }
 
         @keyframes textFadeIn2 {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
+          0% { opacity: 0; transformm: translateY(20px); }
+          100% { opacity: 1; transformm: translateY(0); }
         }
 
         @keyframes textFadeIn3 {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
+          0% { opacity: 0; transformm: translateY(20px); }
+          100% { opacity: 1; transformm: translateY(0); }
         }
 
         .animate-textFadeIn1 {

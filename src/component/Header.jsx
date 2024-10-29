@@ -20,7 +20,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header className="sticky top-0 z-[9999]">
+    <header className="sticky top-0 z-50">
      <nav className={`bg-secondary border-gray-200 px-4 lg:px-6 py-4 text-xl lg:text-2xl xl:text-3xl  text-white ${isShrunk ? 'py-2' : 'py-4'}`}>
   <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
     <a href="/" className="flex items-center">

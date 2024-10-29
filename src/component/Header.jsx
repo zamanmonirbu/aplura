@@ -1,21 +1,32 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import logo from '../images/logo1.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isShrunk, setIsShrunk] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsShrunk(true);
+      } else {
+        setIsShrunk(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="sticky top-0 z-50">
-     <nav className="bg-secondary border-gray-200 px-4 lg:px-6 py-4 text-xl lg:text-2xl xl:text-3xl  text-white">
+    <header className="sticky top-0 z-[9999]">
+     <nav className={`bg-secondary border-gray-200 px-4 lg:px-6 py-4 text-xl lg:text-2xl xl:text-3xl  text-white ${isShrunk ? 'py-2' : 'py-4'}`}>
   <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
     <a href="/" className="flex items-center">
       <img
         src={logo}
-        className="mr-3 h-10 w-8 lg:h-12 lg:w-10"
+        className={`mr-3 ${isShrunk ? 'h-8 w-6 lg:h-10 lg:w-8' : 'h-10 w-8 lg:h-12 lg:w-10'}`}
         alt="Logo"
       />
       <span className="self-center text-lg lg:text-xl font-semibold whitespace-nowrap">

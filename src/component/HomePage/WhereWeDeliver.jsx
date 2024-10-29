@@ -14,7 +14,7 @@ const MapView = () => {
   };
 
   return (
-    <div className="relative w-full sm:w-[90%] md:w-[80%] mx-auto">
+    <div className="relative w-full sm:w-[90%] md:w-[80%] max-w-screen-lg mx-auto">
       {/* Image displayed normally */}
       <img
         src={map}

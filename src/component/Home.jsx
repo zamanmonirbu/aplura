@@ -6,7 +6,7 @@ import ImageCarousel from "./HomePage/ImageCarousel";
 import ProductOfferings from "./HomePage/ProductOfferings";
 import WhereWeDeliver from "./HomePage/WhereWeDeliver";
 import GalleryImages from "./GalleryImages";
-import ImageGallery from "./Animation";
+// import ImageGallery from "./Animation";
 
 
 
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <HeroSection/>
-      <ImageGallery/>
+      {/* <ImageGallery/> */}
       <ImageCarousel />
       <ProductOfferings />
       <GalleryImages/>

@@ -31,7 +31,7 @@ const ImageUpDown = () => {
           </p>
         </div>
 
-        <ComingSoon />
+        {/* <ComingSoon /> */}
       </div>
 
       <style>{`
@@ -51,36 +51,36 @@ const ImageUpDown = () => {
   );
 };
 
-const ComingSoon = () => {
-  return (
-    <div className="coming-soon">
-      <svg
-        xmlns="http://www.w3.org/svg"
-        viewBox="0 0 300 150"
-        className="icon"
-        style={{ maxWidth: "120px", margin: "2px auto" }} // Adjusted size
-      >
-        <path
-          fill="none"
-          stroke="#53FF1C"
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeDasharray="20 25"
-          strokeDashoffset="0"
-          d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
-        >
-          <animate
-            attributeName="stroke-dashoffset"
-            calcMode="spline"
-            dur="8.5s"
-            values="685;-685"
-            keySplines="1 1 1 1"
-            repeatCount="indefinite"
-          />
-        </path>
-      </svg>
-    </div>
-  );
-};
+// const ComingSoon = () => {
+//   return (
+//     <div className="coming-soon">
+//       <svg
+//         xmlns="http://www.w3.org/svg"
+//         viewBox="0 0 300 150"
+//         className="icon"
+//         style={{ maxWidth: "120px", margin: "2px auto" }} // Adjusted size
+//       >
+//         <path
+//           fill="none"
+//           stroke="#53FF1C"
+//           strokeWidth="5"
+//           strokeLinecap="round"
+//           strokeDasharray="20 25"
+//           strokeDashoffset="0"
+//           d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
+//         >
+//           <animate
+//             attributeName="stroke-dashoffset"
+//             calcMode="spline"
+//             dur="8.5s"
+//             values="685;-685"
+//             keySplines="1 1 1 1"
+//             repeatCount="indefinite"
+//           />
+//         </path>
+//       </svg>
+//     </div>
+//   );
+// };
 
 export default ImageUpDown;

@@ -77,7 +77,7 @@ const ImageCarousel = () => {
       {/* Add the ParticlesComponent as a background */}
       {/* <ParticlesComponent /> */}
       
-      <div className="w-full max-w-8xl mx-auto p-4 relative z-10">
+      <div className="w-full max-w--8xl max-w-screen-lg mx-auto p-4 relative z-10">
         {/* Image display with fade transition */}
         <img
           src={images[currentIndex]}

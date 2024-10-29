@@ -46,7 +46,7 @@ const services = [
 
 const GalleryImages = () => {
   return (
-    <div className="flex flex-col w-full sm:w-[90%] md:w-[80%]  mx-auto"> {/* Responsive widths added */}
+    <div className="flex flex-col w-full max-w-screen-lg mx-auto sm:w-[90%] md:w-[80%]  "> {/* Responsive widths added */}
       <p className="text-4xl font-bold text-center my-6 text-secondary">
         Image Gallery
       </p>

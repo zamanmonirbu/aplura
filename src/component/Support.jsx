@@ -8,7 +8,7 @@ const Support = () => {
     <div className="relative min-h-screen">
       {/* ParticlesComponent as Background */}
       {/* <ParticlesComponent /> */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 z-10  bg-opacity-90"> {/* Adjust opacity for better readability */}
+      <div className="md-absolute inset-0 flex flex-col items-center justify-center p-6 z-10  bg-opacity-90"> {/* Adjust opacity for better readability */}
         <h2 className="text-4xl font-bold mb-6 text-secondary" >
         Customer Support
         </h2>

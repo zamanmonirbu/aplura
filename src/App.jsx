@@ -13,7 +13,7 @@ import PotatoVariations from "./component/SecondPage/PotatoVariations";
 import YellowCornProducts from "./component/SecondPage/YellowCornProducts";
 import Support from "./component/Support";
 import ViewAllProducts from "./component/ViewAllProducts";
-
+import "./App.css";
 const App = () => {
   return (
     <div>

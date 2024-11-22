@@ -42,7 +42,7 @@ const products = [
 const ProductOfferings = () => {
   return (
     <section
-      className="py-8 bg-cover bg-center min-h-screen flex justify-center items-center"
+      className=" py-8 bg-cover bg-center min-h-screen flex justify-center items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="container mx-auto text-center p-1 sm:p-2 md:p-6 xl:p-8">

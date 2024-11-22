@@ -5,7 +5,7 @@ import YellowCornProducts from "./SecondPage/YellowCornProducts";
 
 const ViewAllProducts = () => {
   return (
-    <div className="products-container">
+    <div className="products-container max-w-screen-lg mx-auto">
       {/* <ParticlesComponent />  */}
       <div className="content">
         <PotatoVariations />

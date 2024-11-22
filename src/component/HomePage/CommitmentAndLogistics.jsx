@@ -6,7 +6,7 @@ import certificationImage3 from "../../images/cf3.png";
 
 const CommitmentAndLogistics = () => {
   return (
-    <section className="relative py-10 overflow-hidden my-1">
+    <section className="relative max-w-screen-lg mx-auto py-10 overflow-hidden my-1">
       {/* Background Particles */}
       {/* <ParticlesComponent /> */}
 

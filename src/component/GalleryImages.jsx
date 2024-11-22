@@ -46,7 +46,7 @@ const services = [
 
 const GalleryImages = () => {
   return (
-    <div className="flex flex-col w-full sm:w-[90%] md:w-[80%]  mx-auto"> {/* Responsive widths added */}
+    <div className="flex flex-col w-full max-w-screen-lg mx-auto sm:w-[90%] md:w-[80%]  "> {/* Responsive widths added */}
       <p className="text-4xl font-bold text-center my-6 text-secondary">
         Image Gallery
       </p>
@@ -69,7 +69,7 @@ const GalleryImages = () => {
             ></div>
 
             {/* Title over image */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
               <h2 className="text-white text-xl md:text-2xl font-bold px-4 py-2 rounded-md w-[90%] md:w-[70%] text-center">
                 {service.title}
               </h2>

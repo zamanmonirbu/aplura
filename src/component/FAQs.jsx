@@ -63,7 +63,7 @@ const FAQs = () => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
   return (
-    <div className="relative min-h-screen flex justify-center items-center ">
+    <div className="max-w-screen-lg mx-auto relative min-h-screen flex justify-center items-center mb-8">
       <div className="w-full sm:w-[90%] md:w-[80%] mx-auto p-5 bg-white border rounded shadow">
         <h2 className="text-2xl font-semibold text-center mb-5 text-secondary">
           Frequently Asked Questions

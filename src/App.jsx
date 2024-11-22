@@ -14,11 +14,15 @@ import YellowCornProducts from "./component/SecondPage/YellowCornProducts";
 import Support from "./component/Support";
 import ViewAllProducts from "./component/ViewAllProducts";
 import "./App.css";
+import RightSide from "./component/RightSide";
+import MyComponent from "./component/MyComponent";
 const App = () => {
   return (
     <div>
       {/* <ContactInfo /> */}
       <Header />
+      <RightSide/>
+      {/* <MyComponent/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ViewAllProducts />} />

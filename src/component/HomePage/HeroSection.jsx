@@ -3,7 +3,7 @@ import "./HeroSection.css";
 
 const ImageUpDown = () => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden">
       {/* Fixed Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -18,8 +18,8 @@ const ImageUpDown = () => {
       />
 
       {/* Scrollable Content */}
-      <div className="relative z-10 flex flex-col justify-start items-center h-full p-4 overflow-auto sm:h-[90vh] md:h-[80vh] lg:h-[70vh]">
-        <div className="into flex flex-col items-center h-full mt-[7%]">
+      <div className="relative z-10 flex flex-col justify-start items-center h-full p-4 overflow-auto">
+        <div className="into flex flex-col items-center min-h-screen mt-[7%]">
           <p className="text-[#DDE0E0] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center uppercase">
             Innovation Starts in the Soil
           </p>
@@ -54,6 +54,7 @@ const ImageUpDown = () => {
 const ComingSoon = () => {
   return (
     <div className="coming-soon">
+      {/* <p className="text-center">Fertilizing in process...</p> */}
       <svg
         xmlns="http://www.w3.org/svg"
         viewBox="0 0 300 150"
@@ -69,7 +70,7 @@ const ComingSoon = () => {
           strokeDashoffset="0"
           d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
         >
-          <animate
+        <animate
             attributeName="stroke-dashoffset"
             calcMode="spline"
             dur="8.5s"

@@ -56,13 +56,15 @@ const GalleryImages = () => {
           key={index}
         >
           {/* Image Section */}
-          <div className="relative md:w-1/2 h-[250px] md:h-[400px] overflow-hidden">
+          <div className="relative w-full md:w-1/2 h-[250px] md:h-[400px] overflow-hidden">
             <div
               className="w-full h-full bg-center bg-no-repeat rounded-md"
               style={{
                 backgroundImage: `url(${service.imageUrl})`,
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',
+                // width:'90%'
+        
               }}
             ></div>
 

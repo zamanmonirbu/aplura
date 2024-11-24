@@ -24,60 +24,52 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="fixed top-0 left-0 w-full z-50">
       <nav
-        className={`border-gray-200 px-4 lg:px-6 py-4 text-xl lg:text-2xl xl:text-3xl text-white transition-all duration-300 ${
-          isShrunk
-            ? "bg-secondary bg-opacity-50 backdrop-blur-md shadow-md py-8"
-            : "bg-gray-300 py-8"
+        className={`px-4 lg:px-6 py-4 text-xl lg:text-2xl xl:text-3xl transition-all duration-300 ${
+          isShrunk ? "bg-secondary" : "bg-transparent"
         }`}
       >
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
-          <a href="/" className="flex items-center">
+        <div className="flex justify-center items-center mx-auto max-w-screen-2xl space-x-6 text-white">
+          {/* Logo and Name */}
+          <a href="/" className="flex items-center space-x-2 mr-32">
             <img
               src={logo}
-              className={`mr-3 ${
-                isShrunk
-                  ? "h-8 w-6 lg:h-10 lg:w-8"
-                  : "h-10 w-8 lg:h-12 lg:w-10"
+              className={`${
+                isShrunk ? "h-8 w-6 lg:h-10 lg:w-8" : "h-10 w-8 lg:h-12 lg:w-10"
               }`}
               alt="Logo"
             />
-            <span className="self-center text-lg lg:text-xl font-semibold whitespace-nowrap">
+            <span className="self-center text-lg lg:text-xl font-semibold">
               Aplura
             </span>
           </a>
-          <div className="flex items-center space-x-4">
-            {/* Phone Icon with Number */}
-            <a
-              href="tel:+123456789"
-              className="flex items-center text-white hover:text-seconHover"
-            >
-              <FiPhone className="w-6 h-6" />
-              <span className="ml-2">+123 456 789</span>
-            </a>
-            {/* Menu Icon */}
-            <button
-              type="button"
-              className="inline-flex items-center p-2 text-sm rounded-lg hover:bg-seconHover focus:outline-none focus:ring-2 focus:ring-[#a3e4a3] text-white"
-              onClick={toggleMenu}
-            >
-              <FiMenu className="w-6 h-6" />
-            </button>
-          </div>
+
+          {/* Phone Icon with Number */}
+          <a
+            href="tel:+123456789"
+            className="flex items-center hover:text-seconHover space-x-2 "
+          >
+            <FiPhone className="w-6 h-6" />
+            <span className="ml-2">+123 456 789</span>
+          </a>
+
+          {/* Menu Button */}
+          <button
+            type="button"
+            className="inline-flex items-center p-2 rounded-lg hover:bg-seconHover focus:outline-none focus:ring-2 focus:ring-[#a3e4a3]"
+            onClick={toggleMenu}
+          >
+            <FiMenu className="w-6 h-6" />
+          </button>
         </div>
       </nav>
 
-      {/* Sliding Menu */}
       <div
         id="mobile-menu"
         className="fixed top-0 right-0 z-40 w-96 bg-gray-800 text-white transition-all duration-500 ease-in-out h-screen translate-x-full"
       >
-        {/* Close Icon */}
-        <button
-          className="absolute top-4 right-4 text-white"
-          onClick={toggleMenu}
-        >
+        <button className="absolute top-4 right-4" onClick={toggleMenu}>
           <FiX className="w-6 h-6" />
         </button>
 
@@ -87,7 +79,7 @@ const Header = () => {
               <li key={item}>
                 <a
                   href={`/${item.toLowerCase().replace(" ", "-")}`}
-                  className="block py-2 pr-4 pl-3 rounded transition-all duration-300 text-center hover:bg-seconHover text-white"
+                  className="block py-2 pr-4 pl-3 rounded transition-all duration-300 text-center hover:bg-seconHover"
                 >
                   {item}
                 </a>

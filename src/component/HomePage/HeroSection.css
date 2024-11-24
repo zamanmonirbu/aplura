@@ -53,3 +53,65 @@
       width: 70px; /* Further reduced icon size */
   }
 }
+
+
+/* HeroSection.css */
+@keyframes scaleRotateBackground {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes textFadeIn1 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFadeIn3 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-textFadeIn1 {
+  animation: textFadeIn1 2s forwards;
+  animation-delay: 1s;
+}
+
+.animate-textFadeIn2 {
+  animation: textFadeIn2 2s forwards;
+  animation-delay: 2.5s;
+}
+
+.animate-textFadeIn3 {
+  animation: textFadeIn3 2s forwards;
+  animation-delay: 4s;
+}

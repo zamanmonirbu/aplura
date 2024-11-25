@@ -30,9 +30,9 @@ const Header = () => {
           isShrunk ? "bg-secondary" : "bg-transparent"
         }`}
       >
-        <div className="flex justify-center items-center mx-auto max-w-screen-2xl space-x-6 text-white">
+        <div className="flex justify-between items-center mx-auto max-w-screen-2xl text-white">
           {/* Logo and Name */}
-          <a href="/" className="flex items-center space-x-2 mr-32">
+          <a href="/" className="flex items-center space-x-2">
             <img
               src={logo}
               className={`${
@@ -48,10 +48,12 @@ const Header = () => {
           {/* Phone Icon with Number */}
           <a
             href="tel:+123456789"
-            className="flex items-center hover:text-seconHover space-x-2 "
+            className="flex items-center hover:text-seconHover space-x-2 whitespace-nowrap" // Use flex and nowrap
           >
             <FiPhone className="w-6 h-6" />
-            <span className="ml-2">+123 456 789</span>
+            <span className="ml-2 text-sm md:text-base lg:text-lg">
+              +123 456 789
+            </span>
           </a>
 
           {/* Menu Button */}
